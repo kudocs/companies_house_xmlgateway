@@ -1,0 +1,32 @@
+require 'companies_house_xmlgateway/service/base'
+require 'companies_house_xmlgateway/service/form'
+require "companies_house_xmlgateway/service/change_accounting_reference_date"
+require "companies_house_xmlgateway/service/change_of_address"
+require "companies_house_xmlgateway/service/change_of_name"
+require "companies_house_xmlgateway/service/confirmation_statement"
+require "companies_house_xmlgateway/service/director_appointment"
+require "companies_house_xmlgateway/service/director_resignation"
+require "companies_house_xmlgateway/service/secretary_appointment"
+require "companies_house_xmlgateway/service/secretary_resignation"
+require "companies_house_xmlgateway/service/submission_status"
+
+require "companies_house_xmlgateway/version"
+require "companies_house_xmlgateway/config"
+require "companies_house_xmlgateway/client"
+require "companies_house_xmlgateway/form_submission"
+require "companies_house_xmlgateway/status_submission"
+require "companies_house_xmlgateway/response"
+
+module CompaniesHouseXmlgateway
+  class << self
+    def config
+      @config ||= CompaniesHouseXmlgateway::Config.instance
+      yield @config if block_given?
+      @config
+    end
+    
+    def client
+      @client ||= CompaniesHouseXmlgateway::Client.new
+    end
+  end
+end
