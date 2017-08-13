@@ -29,7 +29,7 @@ result = CompaniesHouseXmlgateway.client.perform_confirmation_statement({
   name: 'KUDOCS TESTING LIMITED',
   auth_code: 'ABC123',
   contact_name: 'Ben Dunham',
-  contact_number: '07919388025'
+  contact_number: '01234567890'
 }, {})
 ```
 
