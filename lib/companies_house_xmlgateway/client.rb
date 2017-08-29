@@ -5,8 +5,8 @@ module CompaniesHouseXmlgateway
   class Client
     attr_accessor :timeout, :logger
     
-    #API_URL = 'https://xmlgw.companieshouse.gov.uk'
-    API_URL = 'http://127.0.0.1:5000'
+    API_URL = 'https://xmlgw.companieshouse.gov.uk'
+    #API_URL = 'http://127.0.0.1:5000'
     
     ACTIONS =  {
       change_of_address: CompaniesHouseXmlgateway::Service::ChangeOfAddress,
@@ -30,6 +30,16 @@ module CompaniesHouseXmlgateway
       make_http_request(submission)
     end
     
+    # Send a Submission Acknowledgement to the API in order to release any new statuses and clear old ones
+    def acknowledge_submission_status
+      submission = CompaniesHouseXmlgateway::StatusSubmission.new
+    
+      service = CompaniesHouseXmlgateway::Service::AcknowledgeSubmissionStatus.new
+      submission.xml = service.build(submission)
+    
+      make_http_request(submission)
+    end
+    
     private
     
       # Create a Submission record
@@ -47,7 +57,7 @@ module CompaniesHouseXmlgateway
         conn = build_connection
         begin
           res = conn.post do |req|
-            req.url '/'
+            req.url '/v1-0/xmlgw/Gateway'
             req.headers['Content-Type'] = 'text/xml'
             req.body = submission.xml
           end
