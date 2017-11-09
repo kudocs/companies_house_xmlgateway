@@ -17,21 +17,31 @@ module CompaniesHouseXmlgateway
               xml.ConsentToAct submission.data[:consent_to_act]
               xml.Director do
                 xml.Person do
-                  xml.Title submission.data[:title]
+                  #xml.Title submission.data[:title]
                   xml.Forename submission.data[:forename]
-                  xml.OtherForenames submission.data[:other_forenames]
+#                  if submission.data[:other_forenames]
+#                   xml.OtherForenames submission.data[:other_forenames]
+#                  end
                   xml.Surname submission.data[:surname]
                   xml.ServiceAddress do#submission.data[:service_address] #do
                    xml.Address do
                     xml.Premise submission.data[:service_address][:premise]
                     xml.Street submission.data[:service_address][:street]
-                    xml.Thoroughfare submission.data[:service_address][:thoroughfare]
+                    if submission.data[:service_address][:thoroughfare]
+                     xml.Thoroughfare submission.data[:service_address][:thoroughfare]
+                    end
                     xml.PostTown submission.data[:service_address][:post_town]
-                    xml.County submission.data[:service_address][:county]                    
+                    if submission.data[:service_address][:county]
+                     xml.County submission.data[:service_address][:county]
+                    end                    
                     xml.Country submission.data[:service_address][:country]
                     xml.Postcode submission.data[:service_address][:postcode]
-                    xml.CareofName submission.data[:service_address][:care_of_name]
-                    xml.PoBox submission.data[:service_address][:po_box]                    
+                    if submission.data[:service_address][:care_of_name]
+                     xml.CareofName submission.data[:service_address][:care_of_name]
+                    end
+                    if submission.data[:service_address][:po_box]
+                     xml.PoBox submission.data[:service_address][:po_box]
+                    end                    
                    end
 #                    xml.SameAsRegisteredOffice submission.data[:service_address][:service_addr_same]
                   end
@@ -47,9 +57,13 @@ module CompaniesHouseXmlgateway
                     xml.Address do
                     xml.Premise submission.data[:residential_address][:premise]
                     xml.Street submission.data[:residential_address][:street]
-                    xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
+                    if submission.data[:residential_address][:thoroughfare]
+                     xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
+                    end
                     xml.PostTown submission.data[:residential_address][:post_town]
-                    xml.County submission.data[:residential_address][:county]                    
+                    if submission.data[:residential_address][:county]
+                     xml.County submission.data[:residential_address][:county] 
+                    end
                     xml.Country submission.data[:residential_address][:country]
                     xml.Postcode submission.data[:residential_address][:postcode]
                     #xml.CareofName submission.data[:residential_address][:care_of_name]
