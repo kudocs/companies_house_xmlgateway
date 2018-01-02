@@ -11,7 +11,9 @@ module CompaniesHouseXmlgateway
     ACTIONS =  {
       change_of_address: CompaniesHouseXmlgateway::Service::ChangeOfAddress,
       confirmation_statement: CompaniesHouseXmlgateway::Service::ConfirmationStatement,
-      director_appointment: CompaniesHouseXmlgateway::Service::DirectorAppointment
+      director_appointment: CompaniesHouseXmlgateway::Service::DirectorAppointment,
+      secretary_appointment: CompaniesHouseXmlgateway::Service::SecretaryAppointment,
+      director_resignation: CompaniesHouseXmlgateway::Service::DirectorResignation
     }
     
     # Define the Perform method for each of the actions supported by the Client
