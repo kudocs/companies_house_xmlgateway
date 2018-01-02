@@ -18,8 +18,8 @@ module CompaniesHouseXmlgateway
               xml.CorporateName submission.data[:corporate_name]
               end
               xml.Person do
-                xml.Forename submission.data[:forename]
                 xml.Surname submission.data[:surname]
+                xml.Forename submission.data[:forename]                
                 xml.DOB submission.data[:dob]
               end
             end
