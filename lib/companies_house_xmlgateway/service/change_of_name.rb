@@ -14,7 +14,9 @@ module CompaniesHouseXmlgateway
           ) do
             xml.MethodOfChange submission.data[:method]
             xml.ProposedCompanyName submission.data[:proposed_name]
-            xml.MeetingDate submission.data[:meeting_date]
+            if submission.data[:meeting_date]
+              xml.MeetingDate submission.data[:meeting_date]
+            end
             xml.SameDay submission.data[:same_day]
             xml.NoticeGiven submission.data[:notice_given]
           end
