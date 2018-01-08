@@ -7,7 +7,7 @@ module CompaniesHouseXmlgateway
       # Generate the XML document that is embedded in the envelope for a Change Name action
       def build(submission)
         super do |xml|
-          xml.ConfirmationStatement(
+          xml.ChangeOfName(
             'xmlns' => 'http://xmlgw.companieshouse.gov.uk',
             'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"

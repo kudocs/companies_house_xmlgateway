@@ -10,6 +10,7 @@ module CompaniesHouseXmlgateway
     
     ACTIONS =  {
       change_of_address: CompaniesHouseXmlgateway::Service::ChangeOfAddress,
+      change_of_name: CompaniesHouseXmlgateway::Service::ChangeOfName,
       confirmation_statement: CompaniesHouseXmlgateway::Service::ConfirmationStatement,
       director_appointment: CompaniesHouseXmlgateway::Service::DirectorAppointment,
       secretary_appointment: CompaniesHouseXmlgateway::Service::SecretaryAppointment,
