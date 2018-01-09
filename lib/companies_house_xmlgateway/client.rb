@@ -15,7 +15,8 @@ module CompaniesHouseXmlgateway
       director_appointment: CompaniesHouseXmlgateway::Service::DirectorAppointment,
       secretary_appointment: CompaniesHouseXmlgateway::Service::SecretaryAppointment,
       director_resignation: CompaniesHouseXmlgateway::Service::DirectorResignation,
-      secretary_resignation: CompaniesHouseXmlgateway::Service::SecretaryResignation
+      secretary_resignation: CompaniesHouseXmlgateway::Service::SecretaryResignation,
+      share_allotment: CompaniesHouseXmlgateway::Service::ShareAllotment
     }
     
     # Define the Perform method for each of the actions supported by the Client
