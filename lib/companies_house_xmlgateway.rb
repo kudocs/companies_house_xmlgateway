@@ -9,6 +9,7 @@ require "companies_house_xmlgateway/service/director_resignation"
 require "companies_house_xmlgateway/service/secretary_appointment"
 require "companies_house_xmlgateway/service/secretary_resignation"
 require "companies_house_xmlgateway/service/submission_status"
+require "companies_house_xmlgateway/service/share_allotment"
 require "companies_house_xmlgateway/service/acknowledge_submission_status"
 
 require "companies_house_xmlgateway/version"
