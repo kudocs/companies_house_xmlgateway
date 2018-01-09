@@ -17,7 +17,7 @@ module CompaniesHouseXmlgateway
             xml.StatementOfCapital do
               #TODO  in future when we handle multiple currency we need to extend the support
               xml.Capital do
-                xml.TotalNumberOfIssuedShare submission.data[:statement_of_capital][:total_shares]
+                xml.TotalNumberOfIssuedShares submission.data[:statement_of_capital][:total_shares]
                 xml.ShareCurrency submission.data[:statement_of_capital][:currency]
                 xml.TotalAggregateNominalValue submission.data[:statement_of_capital][:total_nominal_value]
                 #Total available shares along with the allotment
@@ -34,7 +34,7 @@ module CompaniesHouseXmlgateway
               end
             end   
             #New Shares for each person in the Process
-            submission.data[:allotment].each do |allotment|
+            submission.data[:allotments].each do |allotment|
               xml.Allotment do
                 xml.ShareClass allotment[:share_class]
                 xml.NumShares allotment[:shares_count]
