@@ -17,6 +17,7 @@ module CompaniesHouseXmlgateway
             xml.StatementOfCapital do
               #TODO  in future when we handle multiple currency we need to extend the support
               xml.Capital do
+                xml.TotalAmountUnpaid submission.data[:statement_of_capital][:total_amount_unpaid]
                 xml.TotalNumberOfIssuedShares submission.data[:statement_of_capital][:total_shares]
                 xml.ShareCurrency submission.data[:statement_of_capital][:currency]
                 xml.TotalAggregateNominalValue submission.data[:statement_of_capital][:total_nominal_value]
