@@ -17,12 +17,13 @@ module CompaniesHouseXmlgateway
             xml.ConsentToAct submission.data[:consent_to_act]
             xml.Director do
               xml.Corporate do
+                xml.CorporateName submission.data[:corporate_name] 
                 #xml.Title submission.data[:title]
-                xml.Forename submission.data[:forename]
+                #xml.Forename submission.data[:forename]
                 #                  if submission.data[:other_forenames]
                 #                   xml.OtherForenames submission.data[:other_forenames]
                 #                  end
-                xml.Surname submission.data[:surname]
+               # xml.Surname submission.data[:surname]
                 #                  xml.ServiceAddress do#submission.data[:service_address] #do
                 xml.Address do
                   xml.Premise submission.data[:address][:premise]

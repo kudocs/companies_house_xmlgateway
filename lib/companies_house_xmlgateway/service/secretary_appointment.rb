@@ -44,32 +44,32 @@ module CompaniesHouseXmlgateway
                   end
                   #                    xml.SameAsRegisteredOffice submission.data[:service_address][:service_addr_same]
                 end
-                xml.DOB submission.data[:dob]
-                xml.Nationality submission.data[:nationality]
-                xml.Occupation submission.data[:occupation]
-                xml.CountryOfResidence submission.data[:country]
+                #xml.DOB submission.data[:dob]
+#                xml.Nationality submission.data[:nationality]
+#                xml.Occupation submission.data[:occupation]
+#                xml.CountryOfResidence submission.data[:country]
                 #                  xml.PreviousNames do
                 #                    xml.Forename submission.data[:previous][:forename]
                 #                    xml.Surname submission.data[:previous][:surname]
                 #                  end
-                xml.ResidentialAddress do#submission.data[:residential_address]#do
-                  xml.Address do
-                    xml.Premise submission.data[:residential_address][:premise]
-                    xml.Street submission.data[:residential_address][:street]
-                    if submission.data[:residential_address][:thoroughfare]
-                      xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
-                    end
-                    xml.PostTown submission.data[:residential_address][:post_town]
-                    if submission.data[:residential_address][:county]
-                      xml.County submission.data[:residential_address][:county] 
-                    end
-                    xml.Country submission.data[:residential_address][:country]
-                    xml.Postcode submission.data[:residential_address][:postcode]
-                    #xml.CareofName submission.data[:residential_address][:care_of_name]
-                    #xml.PoBox submission.data[:residential_address][:po_box]  
-                  end
-                  #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
-                end
+#                xml.ResidentialAddress do#submission.data[:residential_address]#do
+#                  xml.Address do
+#                    xml.Premise submission.data[:residential_address][:premise]
+#                    xml.Street submission.data[:residential_address][:street]
+#                    if submission.data[:residential_address][:thoroughfare]
+#                      xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
+#                    end
+#                    xml.PostTown submission.data[:residential_address][:post_town]
+#                    if submission.data[:residential_address][:county]
+#                      xml.County submission.data[:residential_address][:county] 
+#                    end
+#                    xml.Country submission.data[:residential_address][:country]
+#                    xml.Postcode submission.data[:residential_address][:postcode]
+#                    #xml.CareofName submission.data[:residential_address][:care_of_name]
+#                    #xml.PoBox submission.data[:residential_address][:po_box]  
+#                  end
+#                  #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
+#                end
               end
             end
           end

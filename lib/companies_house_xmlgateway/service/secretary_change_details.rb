@@ -1,6 +1,6 @@
 module CompaniesHouseXmlgateway
   module Service
-    class DirectorChangeDetails < CompaniesHouseXmlgateway::Service::Form
+    class SecretaryChangeDetails < CompaniesHouseXmlgateway::Service::Form
       API_CLASS_NAME = 'OfficerChangeDetails'
       SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/OfficerChangeDetails-v2-8.xsd'
       
@@ -13,11 +13,10 @@ module CompaniesHouseXmlgateway
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
             xml.DateOfChange submission.data[:change_date]
-            xml.Director do
+            xml.Secretary do
               xml.Person do                
                 xml.Surname submission.data[:surname]
-                xml.Forename submission.data[:forename]               
-                xml.DOB submission.data[:dob]
+                xml.Forename submission.data[:forename]              
                 xml.Change do
                   xml.Name do
                     #xml.Title
@@ -49,29 +48,29 @@ module CompaniesHouseXmlgateway
                     #                    xml.ResidentialAddressUnchangedInd
                   end
                   #                  
-                  xml.ResidentialAddress do#submission.data[:residential_address]#do
-                    xml.Address do
-                      xml.Premise submission.data[:residential_address][:premise]
-                      xml.Street submission.data[:residential_address][:street]
-                      if submission.data[:residential_address][:thoroughfare]
-                        xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
-                      end
-                      xml.PostTown submission.data[:residential_address][:post_town]
-                      if submission.data[:residential_address][:county]
-                        xml.County submission.data[:residential_address][:county] 
-                      end
-                      xml.Country submission.data[:residential_address][:country]
-                      xml.Postcode submission.data[:residential_address][:postcode]
-                   
-                    end
-                    #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
-                  end
+#                  xml.ResidentialAddress do#submission.data[:residential_address]#do
+#                    xml.Address do
+#                      xml.Premise submission.data[:residential_address][:premise]
+#                      xml.Street submission.data[:residential_address][:street]
+#                      if submission.data[:residential_address][:thoroughfare]
+#                        xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
+#                      end
+#                      xml.PostTown submission.data[:residential_address][:post_town]
+#                      if submission.data[:residential_address][:county]
+#                        xml.County submission.data[:residential_address][:county] 
+#                      end
+#                      xml.Country submission.data[:residential_address][:country]
+#                      xml.Postcode submission.data[:residential_address][:postcode]
+#                   
+#                    end
+#                    #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
+#                  end
                   #                  xml.ResidentialAddress do
                   #                    xml.SameAsServiceAddress
                   #                  end                  
-                  xml.Nationality submission.data[:nationality]                  
-                  xml.CountryOfResidence submission.data[:country]
-                  xml.Occupation submission.data[:occupation]
+#                  xml.Nationality submission.data[:nationality]                  
+#                  xml.CountryOfResidence submission.data[:country]
+#                  xml.Occupation submission.data[:occupation]
                 end
               end
             end
