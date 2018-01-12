@@ -13,17 +13,21 @@ module CompaniesHouseXmlgateway
       change_of_name: CompaniesHouseXmlgateway::Service::ChangeOfName,
       confirmation_statement: CompaniesHouseXmlgateway::Service::ConfirmationStatement,
       director_appointment: CompaniesHouseXmlgateway::Service::DirectorAppointment,
+      secretary_appointment: CompaniesHouseXmlgateway::Service::SecretaryAppointment,
+      member_appointment: CompaniesHouseXmlgateway::Service::MemberAppointment,
+      director_change_details: CompaniesHouseXmlgateway::Service::DirectorChangeDetails,
+      secretary_change_details: CompaniesHouseXmlgateway::Service::SecretaryChangeDetails,
+      member_change_details: CompaniesHouseXmlgateway::Service::MemberChangeDetails,
       corporate_director_appointment: CompaniesHouseXmlgateway::Service::CorporateDirectorAppointment,
       corporate_secretary_appointment: CompaniesHouseXmlgateway::Service::CorporateSecretaryAppointment,
+      corporate_member_appointment: CompaniesHouseXmlgateway::Service::CorporateMemberAppointment,
       corporate_director_change_details: CompaniesHouseXmlgateway::Service::CorporateDirectorChangeDetails,
       corporate_secretary_change_details: CompaniesHouseXmlgateway::Service::CorporateSecretaryChangeDetails,
-      secretary_appointment: CompaniesHouseXmlgateway::Service::SecretaryAppointment,
+      corporate_member_change_details: CompaniesHouseXmlgateway::Service::CorporateMemberChangeDetails,      
       director_resignation: CompaniesHouseXmlgateway::Service::DirectorResignation,
       secretary_resignation: CompaniesHouseXmlgateway::Service::SecretaryResignation,
       share_allotment: CompaniesHouseXmlgateway::Service::ShareAllotment,
-      name_search: CompaniesHouseXmlgateway::Service::NameSearch,
-      director_change_details: CompaniesHouseXmlgateway::Service::DirectorChangeDetails,
-      secretary_change_details: CompaniesHouseXmlgateway::Service::SecretaryChangeDetails
+      name_search: CompaniesHouseXmlgateway::Service::NameSearch      
     }
     
     # Define the Perform method for each of the actions supported by the Client
