@@ -20,6 +20,7 @@ require "companies_house_xmlgateway/service/corporate_secretary_change_details"
 require "companies_house_xmlgateway/service/corporate_member_change_details"
 require "companies_house_xmlgateway/service/submission_status"
 require "companies_house_xmlgateway/service/share_allotment"
+require "companies_house_xmlgateway/service/change_accounting_reference_date"
 require "companies_house_xmlgateway/service/name_search"
 require "companies_house_xmlgateway/service/acknowledge_submission_status"
 
