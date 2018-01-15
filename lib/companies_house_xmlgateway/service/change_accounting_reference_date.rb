@@ -15,7 +15,7 @@ module CompaniesHouseXmlgateway
             xml.AccountRefDate submission.data[:ref_date]
             xml.ChangeToPeriod submission.data[:period] 
             xml.AmendedAccountRefDate submission.data[:new_ref_date]
-            if submission.data[:ext]
+            if submission.data[:more_yrs]
               xml.FiveYearExtensionDetails do  
                 xml.ExtensionReason submission.data[:ext][:reason]
                 xml.ExtensionAuthorisedCode submission.data[:ext][:au_code]
