@@ -30,8 +30,10 @@ module CompaniesHouseXmlgateway
       change_ref_date: CompaniesHouseXmlgateway::Service::ChangeAccountingReferenceDate,
       psc_notification: CompaniesHouseXmlgateway::Service::PscNotification,
       psc_cessation: CompaniesHouseXmlgateway::Service::PscCessation,
+      psc_change_details: CompaniesHouseXmlgateway::Service::PscChangeDetails,
       corporate_psc_notification: CompaniesHouseXmlgateway::Service::CorporatePscNotification,
       corporate_psc_cessation: CompaniesHouseXmlgateway::Service::CorporatePscCessation,
+      corporate_psc_change_details: CompaniesHouseXmlgateway::Service::CorporatePscChangeDetails,
       name_search: CompaniesHouseXmlgateway::Service::NameSearch      
     }
     
