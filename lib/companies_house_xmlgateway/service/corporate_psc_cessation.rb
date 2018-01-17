@@ -1,6 +1,6 @@
 module CompaniesHouseXmlgateway
   module Service
-    class PscCessation < CompaniesHouseXmlgateway::Service::Form
+    class CorporatePscCessation < CompaniesHouseXmlgateway::Service::Form
       API_CLASS_NAME = 'PSCCessation'
       SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/PSCCessation-v1-1.xsd'
       
@@ -13,13 +13,8 @@ module CompaniesHouseXmlgateway
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
             
-            xml.Individual do
-              xml.Surname submission.data[:surname]
-              xml.Forename submission.data[:forename]
-              xml.PartialDOB do                
-                xml.Month submission.data[:dob_month]
-                xml.Year submission.data[:dob_year]
-              end
+            xml.Corporate do
+              xml.CorporateName submission.data[:name] 
             end
             xml.CessationDate submission.data[:cessation_date]
             xml.RegisterEntryDate submission.data[:register_entry_date]

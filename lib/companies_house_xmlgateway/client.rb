@@ -27,7 +27,11 @@ module CompaniesHouseXmlgateway
       director_resignation: CompaniesHouseXmlgateway::Service::DirectorResignation,
       secretary_resignation: CompaniesHouseXmlgateway::Service::SecretaryResignation,
       share_allotment: CompaniesHouseXmlgateway::Service::ShareAllotment,
-      change_ref_date: CompaniesHouseXmlgateway::Service::ChangeAccountingReferenceDate,      
+      change_ref_date: CompaniesHouseXmlgateway::Service::ChangeAccountingReferenceDate,
+      psc_notification: CompaniesHouseXmlgateway::Service::PscNotification,
+      psc_cessation: CompaniesHouseXmlgateway::Service::PscCessation,
+      corporate_psc_notification: CompaniesHouseXmlgateway::Service::CorporatePscNotification,
+      corporate_psc_cessation: CompaniesHouseXmlgateway::Service::CorporatePscCessation,
       name_search: CompaniesHouseXmlgateway::Service::NameSearch      
     }
     
