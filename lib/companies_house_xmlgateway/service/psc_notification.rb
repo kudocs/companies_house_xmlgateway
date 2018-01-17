@@ -20,7 +20,7 @@ module CompaniesHouseXmlgateway
               xml.Surname submission.data[:surname]
               xml.ServiceAddress do#submission.data[:service_address] #do
                 xml.Address do
-                  xml.Premise submission.data[:service_address][:premises]
+                  xml.Premise submission.data[:service_address][:premise]
                   xml.Street submission.data[:service_address][:street]
                   if submission.data[:service_address][:thoroughfare]
                     xml.Thoroughfare submission.data[:service_address][:thoroughfare]
@@ -46,7 +46,7 @@ module CompaniesHouseXmlgateway
              
               xml.ResidentialAddress do#submission.data[:residential_address]#do
                 xml.Address do
-                  xml.Premise submission.data[:residential_address][:premises]
+                  xml.Premise submission.data[:residential_address][:premise]
                   xml.Street submission.data[:residential_address][:street]
                   if submission.data[:residential_address][:thoroughfare]
                     xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
