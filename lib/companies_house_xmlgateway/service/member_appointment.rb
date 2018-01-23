@@ -14,7 +14,7 @@ module CompaniesHouseXmlgateway
           ) do
             #xml.OfficerAppointment do
               #xml.AppointmentDate submission.data[:appointment_date]
-              xml.ConsentToAct submission.data[:consent_to_act]
+              #xml.ConsentToAct submission.data[:consent_to_act]
               xml.Member do
                 xml.DesignatedInd submission.data[:is_designated]
                 xml.Person do
