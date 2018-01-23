@@ -13,7 +13,7 @@ module CompaniesHouseXmlgateway
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
             #xml.OfficerAppointment do
-              xml.AppointmentDate submission.data[:appointment_date]
+              #xml.AppointmentDate submission.data[:appointment_date]
               xml.ConsentToAct submission.data[:consent_to_act]
               xml.Member do
                 xml.DesignatedInd submission.data[:is_designated]
