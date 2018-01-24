@@ -15,11 +15,12 @@ module CompaniesHouseXmlgateway
             xml.ResignationDate submission.data[:resignation_date]
             xml.Secretary do 
               if submission.data[:corporate_name]
-              xml.CorporateName submission.data[:corporate_name]
-              end
-              xml.Person do
-                xml.Forename submission.data[:forename]
-                xml.Surname submission.data[:surname]                
+                xml.CorporateName submission.data[:corporate_name]
+              else
+                xml.Person do
+                  xml.Forename submission.data[:forename]
+                  xml.Surname submission.data[:surname]                
+                end
               end
             end
           end
