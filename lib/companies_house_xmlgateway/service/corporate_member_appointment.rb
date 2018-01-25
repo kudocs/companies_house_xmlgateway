@@ -16,6 +16,7 @@ module CompaniesHouseXmlgateway
             xml.AppointmentDate submission.data[:appointment_date]
             xml.ConsentToAct submission.data[:consent_to_act]
             xml.Member do
+              xml.DesignatedInd submission.data[:is_designated]
               xml.Corporate do
                 xml.CorporateName submission.data[:corporate_name] 
                 #xml.Title submission.data[:title]
@@ -91,8 +92,7 @@ module CompaniesHouseXmlgateway
                 #                    end
                 ##                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
                 #                  end
-              end
-              xml.DesignatedInd submission.data[:is_designated]
+              end              
             end
             #end
           end
