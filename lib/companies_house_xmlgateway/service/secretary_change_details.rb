@@ -68,9 +68,9 @@ module CompaniesHouseXmlgateway
                   #                  xml.ResidentialAddress do
                   #                    xml.SameAsServiceAddress
                   #                  end                  
-                  xml.Nationality submission.data[:nationality]                  
-                  xml.CountryOfResidence submission.data[:country]
-                  xml.Occupation submission.data[:occupation]
+#                  xml.Nationality submission.data[:nationality]                  
+#                  xml.CountryOfResidence submission.data[:country]
+#                  xml.Occupation submission.data[:occupation]
                 end
               end
             end
