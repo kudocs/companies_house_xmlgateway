@@ -45,7 +45,7 @@ module CompaniesHouseXmlgateway
                       end                    
                     end
                     #                    xml.SameAsRegisteredOffice submission.data[:service_address][:service_addr_same]
-                    #                    xml.ResidentialAddressUnchangedInd
+                                        xml.ResidentialAddressUnchangedInd false
                   end
                   #                  
                   xml.ResidentialAddress do#submission.data[:residential_address]#do
