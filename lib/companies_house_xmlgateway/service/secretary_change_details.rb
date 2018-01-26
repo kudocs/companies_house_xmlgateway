@@ -45,26 +45,26 @@ module CompaniesHouseXmlgateway
                       end                    
                     end
                     #                    xml.SameAsRegisteredOffice submission.data[:service_address][:service_addr_same]
-                                        xml.ResidentialAddressUnchangedInd false
+                    #                    xml.ResidentialAddressUnchangedInd
                   end
                   #                  
-                  xml.ResidentialAddress do#submission.data[:residential_address]#do
-                    xml.Address do
-                      xml.Premise submission.data[:residential_address][:premise]
-                      xml.Street submission.data[:residential_address][:street]
-                      if submission.data[:residential_address][:thoroughfare]
-                        xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
-                      end
-                      xml.PostTown submission.data[:residential_address][:post_town]
-                      if submission.data[:residential_address][:county]
-                        xml.County submission.data[:residential_address][:county] 
-                      end
-                      xml.Country submission.data[:residential_address][:country]
-                      xml.Postcode submission.data[:residential_address][:postcode]
-                   
-                    end
-                    #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
-                  end
+#                  xml.ResidentialAddress do#submission.data[:residential_address]#do
+#                    xml.Address do
+#                      xml.Premise submission.data[:residential_address][:premise]
+#                      xml.Street submission.data[:residential_address][:street]
+#                      if submission.data[:residential_address][:thoroughfare]
+#                        xml.Thoroughfare submission.data[:residential_address][:thoroughfare]
+#                      end
+#                      xml.PostTown submission.data[:residential_address][:post_town]
+#                      if submission.data[:residential_address][:county]
+#                        xml.County submission.data[:residential_address][:county] 
+#                      end
+#                      xml.Country submission.data[:residential_address][:country]
+#                      xml.Postcode submission.data[:residential_address][:postcode]
+#                   
+#                    end
+#                    #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
+#                  end
                   #                  xml.ResidentialAddress do
                   #                    xml.SameAsServiceAddress
                   #                  end                  
