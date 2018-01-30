@@ -7,6 +7,7 @@ module CompaniesHouseXmlgateway
     
     API_URL = 'https://xmlgw.companieshouse.gov.uk'
     #API_URL = 'http://127.0.0.1:5000'
+    #API_URL = 'http://xmlgw.companieshouse.gov.uk'
     
     ACTIONS =  {
       change_of_address: CompaniesHouseXmlgateway::Service::ChangeOfAddress,
@@ -34,7 +35,9 @@ module CompaniesHouseXmlgateway
       corporate_psc_notification: CompaniesHouseXmlgateway::Service::CorporatePscNotification,
       corporate_psc_cessation: CompaniesHouseXmlgateway::Service::CorporatePscCessation,
       corporate_psc_change_details: CompaniesHouseXmlgateway::Service::CorporatePscChangeDetails,
-      name_search: CompaniesHouseXmlgateway::Service::NameSearch      
+      name_search: CompaniesHouseXmlgateway::Service::NameSearch,
+      company_data: CompaniesHouseXmlgateway::Service::CompanyData,
+      member_data: CompaniesHouseXmlgateway::Service::MemberData,
     }
     
     # Define the Perform method for each of the actions supported by the Client
@@ -78,6 +81,7 @@ module CompaniesHouseXmlgateway
     
       # Use Faraday to send the submission document to the Gateway
       def make_http_request(submission)
+        p submission.xml
         conn = build_connection
         begin
           res = conn.post do |req|

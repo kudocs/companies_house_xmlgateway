@@ -1,6 +1,6 @@
 module CompaniesHouseXmlgateway
   module Service
-    class NameSearch < CompaniesHouseXmlgateway::Service::Form
+    class NameSearch < CompaniesHouseXmlgateway::Service::BaseName
       API_CLASS_NAME = 'NameSearch'
       SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/NameSearch.xsd'
       
@@ -10,12 +10,12 @@ module CompaniesHouseXmlgateway
           xml.NameSearchRequest(
             'xmlns' => 'http://xmlgw.companieshouse.gov.uk/v1-0',
             'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-            'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk/v1-0 #{SCHEMA_XSD}"
+            'xsi:schemaLocation' => "#{SCHEMA_XSD}"
           ) do
             #xml.OfficerAppointment do
               xml.CompanyName submission.data[:name]
               xml.DataSet 'LIVE'
-              xml.SameAs 0
+              xml.SameAs 1
               xml.SearchRows 20
           end
         end

@@ -1,5 +1,8 @@
 require 'companies_house_xmlgateway/service/base'
 require 'companies_house_xmlgateway/service/form'
+require 'companies_house_xmlgateway/service/base_other'
+require 'companies_house_xmlgateway/service/base_name'
+require 'companies_house_xmlgateway/service/form_other'
 require "companies_house_xmlgateway/service/change_accounting_reference_date"
 require "companies_house_xmlgateway/service/change_of_address"
 require "companies_house_xmlgateway/service/change_of_name"
@@ -28,6 +31,8 @@ require "companies_house_xmlgateway/service/corporate_psc_cessation"
 require "companies_house_xmlgateway/service/corporate_psc_notification"
 require "companies_house_xmlgateway/service/corporate_psc_change_details"
 require "companies_house_xmlgateway/service/name_search"
+require "companies_house_xmlgateway/service/company_data"
+require "companies_house_xmlgateway/service/member_data"
 require "companies_house_xmlgateway/service/acknowledge_submission_status"
 
 require "companies_house_xmlgateway/version"
