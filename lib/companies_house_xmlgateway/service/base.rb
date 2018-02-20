@@ -7,7 +7,7 @@ module CompaniesHouseXmlgateway
       QUALIFIER = 'request';
       AUTHENTICATION_METHOD = 'clear';
       API_CLASS_NAME = 'Base'
-      PACKAGE_REFERENCE = '0012'
+      PACKAGE_REFERENCE = '3021'#'0012'
       
       # Generate XML envelope and use a block to generate the Form XML that is subsequently injected
       def build(submission)
