@@ -74,7 +74,7 @@ module CompaniesHouseXmlgateway
                       end
                    
                       xml.CompanyIdentification do
-                        if a[:eea] 
+                        if a[:is_eea] 
                           xml.EEA do
                             xml.PlaceRegistered a[:registered_place]
                             xml.RegistrationNumber a[:reg_no]
