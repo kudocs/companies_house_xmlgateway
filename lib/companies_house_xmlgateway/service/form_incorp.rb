@@ -25,6 +25,12 @@ module CompaniesHouseXmlgateway
             xml.ContentType "application/pdf"
             xml.Category "MEMARTS"
           end
+          xml.Document do
+            xml.Data submission.company[:mem_data]
+            xml.Filename 'Memorandum of Association'
+            xml.ContentType "application/pdf"
+            xml.Category "MEMARTS"
+          end
           end          
         end
       end
