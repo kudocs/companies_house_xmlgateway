@@ -339,7 +339,7 @@ module CompaniesHouseXmlgateway
                     xml.Country g[:address][:country]
                     xml.Postcode g[:address][:postal_code]
                   end
-                  s[:auth].each do |sa|
+                  g[:auth].each do |sa|
                     xml.Authentication do
                       xml.PersonalAttribute sa[:attribute]
                       xml.PersonalData sa[:personal_data]
@@ -367,10 +367,12 @@ module CompaniesHouseXmlgateway
                       xml.Surname a[:sur_name]
                     end
                   end
+                  a[:auth].each do |sa|
                   xml.Authentication do
-                    xml.PersonalAttribute a[:attribute]
-                    xml.PersonalData a[:personal_data]
+                    xml.PersonalAttribute sa[:attribute]
+                    xml.PersonalData sa[:personal_data]
                   end
+                end
                   xml.Address do
                     xml.Premise a[:address][:premise]
                     xml.Street a[:address][:address_line1]
