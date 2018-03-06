@@ -1,7 +1,7 @@
 module CompaniesHouseXmlgateway
   module Service
     class FormIncorp < CompaniesHouseXmlgateway::Service::Base
-       def build(submission)
+      def build(submission)
         super do |xml|
           xml.FormSubmission(
             'xmlns' => 'http://xmlgw.companieshouse.gov.uk/Header',
@@ -19,18 +19,14 @@ module CompaniesHouseXmlgateway
             xml.Form do
               yield xml
             end
-            xml.Document do
-            xml.Data submission.company[:doc_data]
-            xml.Filename 'Articles of Association'
-            xml.ContentType "application/pdf"
-            xml.Category "MEMARTS"
-          end
-          xml.Document do
-            xml.Data submission.company[:mem_data]
-            xml.Filename 'Memorandum of Association'
-            xml.ContentType "application/pdf"
-            xml.Category "MEMARTS"
-          end
+            submission.company[:docs].each do |d|
+              xml.Document do
+                xml.Data d[:doc_data]
+                xml.Filename d[:doc_name]
+                xml.ContentType "application/pdf"
+                xml.Category d[:doc_cat]
+              end
+            end
           end          
         end
       end
