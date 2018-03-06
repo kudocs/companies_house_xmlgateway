@@ -400,9 +400,6 @@ module CompaniesHouseXmlgateway
             end 
             xml.StateSingleMemberCompany submission.data[:single_member] if submission.data[:single_member]
           end
-          xml.Document do
-            xml.Data
-          end
         end
       end
     end

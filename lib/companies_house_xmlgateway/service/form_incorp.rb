@@ -20,6 +20,9 @@ module CompaniesHouseXmlgateway
               yield xml
             end
           end
+          xml.Document do
+            xml.Data
+          end
         end
       end
     end
