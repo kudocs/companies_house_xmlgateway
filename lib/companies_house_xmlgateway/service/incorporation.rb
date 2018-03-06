@@ -287,12 +287,12 @@ module CompaniesHouseXmlgateway
                 end
                 xml.Address do
                   xml.Premise s[:address][:premise]
-                  xml.Street s[:address][:address_line_1]
-                  xml.Thoroughfare s[:address][:address_line_2]
-                  xml.PostTown s[:address][:locality]
-                  xml.County s[:address][:region]
+                  xml.Street s[:address][:street]
+                  xml.Thoroughfare s[:address][:throughfare]
+                  xml.PostTown s[:address][:post_town]
+                  xml.County s[:address][:county]
                   xml.Country s[:address][:country]
-                  xml.Postcode s[:address][:postal_code]
+                  xml.Postcode s[:address][:postcode]
                 end
                 #array one
                 s[:auth].each do |sa|
@@ -332,12 +332,12 @@ module CompaniesHouseXmlgateway
                   end
                   xml.Address do
                     xml.Premise g[:address][:premise]
-                    xml.Street g[:address][:address_line1]
-                    xml.Thoroughfare g[:address][:address_line2]
-                    xml.PostTown g[:address][:locality]
-                    xml.County g[:address][:region]
+                    xml.Street g[:address][:street]
+                    xml.Thoroughfare g[:address][:throughfare]
+                    xml.PostTown g[:address][:post_town]
+                    xml.County g[:address][:county]
                     xml.Country g[:address][:country]
-                    xml.Postcode g[:address][:postal_code]
+                    xml.Postcode g[:address][:postcode]
                   end
                   g[:auth].each do |sa|
                     xml.Authentication do
@@ -373,14 +373,14 @@ module CompaniesHouseXmlgateway
                     xml.PersonalData sa[:personal_data]
                   end
                 end
-                  xml.Address do
+                xml.Address do
                     xml.Premise a[:address][:premise]
-                    xml.Street a[:address][:address_line1]
-                    xml.Thoroughfare a[:address][:address_line2]
-                    xml.PostTown a[:address][:locality]
-                    xml.County a[:address][:region]
+                    xml.Street a[:address][:street]
+                    xml.Thoroughfare a[:address][:throughfare]
+                    xml.PostTown a[:address][:post_town]
+                    xml.County a[:address][:county]
                     xml.Country a[:address][:country]
-                    xml.Postcode a[:address][:postal_code]
+                    xml.Postcode a[:address][:postcode]
                   end
                 end    
               end #of authorizers
