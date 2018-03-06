@@ -236,6 +236,7 @@ module CompaniesHouseXmlgateway
                           end
                           # xml.SameAsRegisteredOffice p[:residential_address][:residential_addr_same]
                         end
+                        xml.ConsentStatement true
                       end
                     end #corp  or individual psc end
                     xml.NatureOfControls do
