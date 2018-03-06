@@ -348,10 +348,7 @@ module CompaniesHouseXmlgateway
                   xml.MemberClass g[:member_class] if g[:member_class]
                   xml.AmountGuaranteed  g[:amount_guart]          
                 end #of guarantors
-              end
-            else
-              xml.Guarantors do                
-              end
+              end            
             end
             
             submission.data[:authoriser].each do |a|
