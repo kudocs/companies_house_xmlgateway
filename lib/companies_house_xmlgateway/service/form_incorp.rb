@@ -20,7 +20,9 @@ module CompaniesHouseXmlgateway
               yield xml
             end
             xml.Document do
-            xml.Data
+            xml.Data submission.company[:doc_data]
+            xml.Filename 'Articles of Association'
+            xml.ContentType 'application/pdf'
           end
           end          
         end
