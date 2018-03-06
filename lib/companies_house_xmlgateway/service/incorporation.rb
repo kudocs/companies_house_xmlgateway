@@ -245,8 +245,8 @@ module CompaniesHouseXmlgateway
                         xml.NatureOfControl n
                       end
                     end
-                    xml.NotificationDate p[:notification_date]
-                    xml.RegisterEntryDate p[:register_entry_date]                 
+#                    xml.NotificationDate p[:notification_date]
+#                    xml.RegisterEntryDate p[:register_entry_date]                 
                   end
                 end #of psc array
               end
