@@ -19,10 +19,10 @@ module CompaniesHouseXmlgateway
             xml.Form do
               yield xml
             end
-          end
-          xml.Document do
+            xml.Document do
             xml.Data
           end
+          end          
         end
       end
     end
