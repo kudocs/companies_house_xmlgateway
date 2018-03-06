@@ -350,10 +350,10 @@ module CompaniesHouseXmlgateway
                 end #of guarantors
               end            
             end
-            
+             xml.Authoriser do
             submission.data[:authoriser].each do |a|
               #start of authorizers
-              xml.Authoriser do
+             
                 xml.Agent do
                   if a[:is_corp]
                     xml.Corporate do 
@@ -383,9 +383,9 @@ module CompaniesHouseXmlgateway
                     xml.Postcode a[:address][:postcode]
                   end
                 end    
-              end #of authorizers
+              
             end
-            
+            end #of authorizers
             xml.SameDay submission.data[:same_day]
             xml.SameName submission.data[:same_name] if submission.data.has_key?(:same_name)
             xml.NameAuthorisation submission.data[:name_auth] if submission.data.has_key?(:name_auth)
