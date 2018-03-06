@@ -22,7 +22,8 @@ module CompaniesHouseXmlgateway
             xml.Document do
             xml.Data submission.company[:doc_data]
             xml.Filename 'Articles of Association'
-            xml.ContentType 'application/pdf'
+            xml.ContentType "application/pdf"
+            xml.Category "MEMARTS"
           end
           end          
         end
