@@ -349,6 +349,9 @@ module CompaniesHouseXmlgateway
                   xml.AmountGuaranteed  g[:amount_guart]          
                 end #of guarantors
               end
+            else
+              xml.Guarantors do                
+              end
             end
             
             submission.data[:authoriser].each do |a|
