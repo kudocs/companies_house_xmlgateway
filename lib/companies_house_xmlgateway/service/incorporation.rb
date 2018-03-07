@@ -364,8 +364,14 @@ module CompaniesHouseXmlgateway
                       xml.Forename submission.data[:agent][:first_name]
                       xml.Surname submission.data[:agent][:sur_name]
                     end
+                  end                  
+                  submission.data[:agent][:auth].each do |sa|
+                  xml.Authentication do
+                    xml.PersonalAttribute sa[:attribute]
+                    xml.PersonalData sa[:personal_data]
                   end
-                  xml.Address do
+                end
+                xml.Address do
                     xml.Premise submission.data[:agent][:address][:premise]
                     xml.Street submission.data[:agent][:address][:street]
                     xml.Thoroughfare submission.data[:agent][:address][:throughfare]
@@ -374,12 +380,6 @@ module CompaniesHouseXmlgateway
                     xml.Country submission.data[:agent][:address][:country]
                     xml.Postcode submission.data[:agent][:address][:postcode]
                   end
-                  submission.data[:agent][:auth].each do |sa|
-                  xml.Authentication do
-                    xml.PersonalAttribute sa[:attribute]
-                    xml.PersonalData sa[:personal_data]
-                  end
-                end
                 end
               end
             else
