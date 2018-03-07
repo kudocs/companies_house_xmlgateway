@@ -30,10 +30,10 @@ module CompaniesHouseXmlgateway
               end
               xml.SenderDetails do
                 xml.IDAuthentication do
-                  xml.SenderID 'XMLGatewayTestUserID'
+                  xml.SenderID '00601861'#'XMLGatewayTestUserID'
                   xml.Authentication do
                     xml.Method AUTHENTICATION_METHOD
-                    xml.Value Digest::MD5.hexdigest('XMLGatewayTestUserID'+'XMLGatewayTestPassword'+TRANS_ID.to_s)
+                    xml.Value Digest::MD5.hexdigest('00601861'+'kudocs2018'+TRANS_ID.to_s) #('XMLGatewayTestUserID'+'XMLGatewayTestPassword'+TRANS_ID.to_s)
                   end
                 end
               end
