@@ -350,6 +350,39 @@ module CompaniesHouseXmlgateway
                 end #of guarantors
               end            
             end
+            if submission.data[:is_agent]
+              xml.Authoriser do
+                xml.Agent do
+                  if submission.data[:agent][:is_corp]
+                    xml.Corporate do 
+                      xml.Forename submission.data[:agent][:first_name]
+                      xml.Surname submission.data[:agent][:sur_name]
+                      xml.CorporateName submission.data[:agent][:corp_name]
+                    end
+                  else
+                    xml.Person do 
+                      xml.Forename submission.data[:agent][:first_name]
+                      xml.Surname submission.data[:agent][:sur_name]
+                    end
+                  end
+                  xml.Address do
+                    xml.Premise submission.data[:agent][:address][:premise]
+                    xml.Street submission.data[:agent][:address][:street]
+                    xml.Thoroughfare submission.data[:agent][:address][:throughfare]
+                    xml.PostTown submission.data[:agent][:address][:post_town]
+                    xml.County submission.data[:agent][:address][:county]
+                    xml.Country submission.data[:agent][:address][:country]
+                    xml.Postcode submission.data[:agent][:address][:postcode]
+                  end
+                  submission.data[:agent][:auth].each do |sa|
+                  xml.Authentication do
+                    xml.PersonalAttribute sa[:attribute]
+                    xml.PersonalData sa[:personal_data]
+                  end
+                end
+                end
+              end
+            else
              xml.Authoriser do               
              xml.Subscribers do
             submission.data[:authoriser].each do |a|
@@ -388,6 +421,7 @@ module CompaniesHouseXmlgateway
             end
             end #of subscribers
             end #of authorizers
+            end #else of authorizers
             xml.SameDay submission.data[:same_day]
             xml.SameName submission.data[:same_name] if submission.data.has_key?(:same_name)
             xml.NameAuthorisation submission.data[:name_auth] if submission.data.has_key?(:name_auth)
