@@ -38,7 +38,8 @@ module CompaniesHouseXmlgateway
       name_search: CompaniesHouseXmlgateway::Service::NameSearch,
       company_data: CompaniesHouseXmlgateway::Service::CompanyData,
       member_data: CompaniesHouseXmlgateway::Service::MemberData,
-      incorporation: CompaniesHouseXmlgateway::Service::Incorporation
+      incorporation: CompaniesHouseXmlgateway::Service::Incorporation,
+      submission_status_specific: CompaniesHouseXmlgateway::Service::SubmissionStatusSpecific,
     }
     
     # Define the Perform method for each of the actions supported by the Client

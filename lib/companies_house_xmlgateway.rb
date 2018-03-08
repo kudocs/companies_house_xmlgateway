@@ -35,6 +35,7 @@ require "companies_house_xmlgateway/service/name_search"
 require "companies_house_xmlgateway/service/company_data"
 require "companies_house_xmlgateway/service/member_data"
 require "companies_house_xmlgateway/service/incorporation"
+require "companies_house_xmlgateway/service/submission_status_specific"
 require "companies_house_xmlgateway/service/acknowledge_submission_status"
 
 require "companies_house_xmlgateway/version"
