@@ -5,7 +5,7 @@ module CompaniesHouseXmlgateway
   class Client
     attr_accessor :timeout, :logger
     
-    #API_URL = 'https://xmlgw.companieshouse.gov.uk'
+    API_HTTPS_URL = 'https://xmlgw.companieshouse.gov.uk'
     #API_URL = 'http://127.0.0.1:5000'
     #API_URL = 'http://xmlgw.companieshouse.gov.uk'
     API_URL = 'http://xmlgw.companieshouse.gov.uk'
@@ -74,13 +74,16 @@ module CompaniesHouseXmlgateway
     
       # Create a Submission record
       def perform_action(service_class, company, data)
-        submission = CompaniesHouseXmlgateway::FormSubmission.new(company, data)
+      submission = CompaniesHouseXmlgateway::FormSubmission.new(company, data)
       
-        service = service_class.new
-        submission.xml = service.build(submission)
-        p "#{service_class}----------CH"
+      service = service_class.new
+      submission.xml = service.build(submission)
+      if service_class == "CompaniesHouseXmlgateway::Service::NameSearch"
         make_http_request(submission)
+      else
+        make_https_request(submission)
       end
+    end
     
       # Use Faraday to send the submission document to the Gateway
       def make_http_request(submission)
@@ -101,6 +104,27 @@ module CompaniesHouseXmlgateway
       # Create a new Faraday instance using the endpoint URL
       def build_connection
         Faraday.new(:url => API_URL)
+      end
+      
+      # Use Faraday to send the submission document to the Gateway using HTTPS
+      def make_https_request(submission)
+        p submission.xml
+        conn = build_https_connection
+        begin
+          res = conn.post do |req|
+            req.url '/v1-0/xmlgw/Gateway'
+            req.headers['Content-Type'] = 'text/xml'
+            req.body = submission.xml
+          end
+          return CompaniesHouseXmlgateway::Response.new(submission, res)
+        rescue Faraday::Error::ConnectionFailed => e
+          
+        end
+      end
+      
+      # Create a new Faraday instance using the endpoint URL using HTTPS
+      def build_https_connection
+        Faraday.new(:url => API_HTTPS_URL)
       end
   end
 end
