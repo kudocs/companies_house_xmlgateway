@@ -78,7 +78,7 @@ module CompaniesHouseXmlgateway
       
       service = service_class.new
       submission.xml = service.build(submission)
-      if service_class == "CompaniesHouseXmlgateway::Service::NameSearch"
+      if service_class.to_s == "CompaniesHouseXmlgateway::Service::NameSearch"
         make_http_request(submission)
       else
         make_https_request(submission)
