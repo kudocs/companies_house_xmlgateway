@@ -30,10 +30,10 @@ module CompaniesHouseXmlgateway
               end
               xml.SenderDetails do
                 xml.IDAuthentication do
-                  xml.SenderID '00601861'#'XMLGatewayTestUserID'
+                  xml.SenderID '98949600185385071561924733029501'#'XMLGatewayTestUserID'
                   xml.Authentication do
                     xml.Method AUTHENTICATION_METHOD
-                    xml.Value Digest::MD5.hexdigest('00601861'+'v9b2fijjc2que2pfet9pjllkzjp4961c'+TRANS_ID.to_s) #('XMLGatewayTestUserID'+'XMLGatewayTestPassword'+TRANS_ID.to_s)
+                    xml.Value Digest::MD5.hexdigest('98949600185385071561924733029501'+'v9b2fijjc2que2pfet9pjllkzjp4961c'+TRANS_ID.to_s) #('XMLGatewayTestUserID'+'XMLGatewayTestPassword'+TRANS_ID.to_s)
                   end
                 end
               end

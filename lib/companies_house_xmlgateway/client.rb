@@ -5,10 +5,10 @@ module CompaniesHouseXmlgateway
   class Client
     attr_accessor :timeout, :logger
     
-    #API_URL = 'https://xmlgw.companieshouse.gov.uk'
+    API_URL = 'https://xmlgw.companieshouse.gov.uk'
     #API_URL = 'http://127.0.0.1:5000'
     #API_URL = 'http://xmlgw.companieshouse.gov.uk'
-    API_URL = 'http://xmlgw.companieshouse.gov.uk'
+    #API_URL = 'http://xmlgw.companieshouse.gov.uk'
     
     ACTIONS =  {
       change_of_address: CompaniesHouseXmlgateway::Service::ChangeOfAddress,
