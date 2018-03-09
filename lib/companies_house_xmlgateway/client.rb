@@ -78,7 +78,7 @@ module CompaniesHouseXmlgateway
       
         service = service_class.new
         submission.xml = service.build(submission)
-      
+        p "#{service_class}----------CH"
         make_http_request(submission)
       end
     
