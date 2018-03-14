@@ -14,9 +14,9 @@ module CompaniesHouseXmlgateway
           ) do
             xml.TradingOnMarket submission.data[:trading_on_market] if submission.data[:trading_on_market]
             xml.DTR5Applies submission.data[:dtr5_applies] if submission.data[:dtr5_applies]
-            xml.PSCExemptAsTradingOnRegulatedMarket submission.data[:psc1] if submission.data[:psc1]
-            xml.PSCExemptAsSharesAdmittedOnMarket submission.data[:psc2] if submission.data[:psc2]
-            xml.PSCExemptAsTradingOnUKRegulatedMarket submission.data[:psc3] if submission.data[:psc3]
+            xml.PSCExemptAsTradingOnRegulatedMarket submission.data[:psc1] if submission.data[:psc_exempt]
+            xml.PSCExemptAsSharesAdmittedOnMarket submission.data[:psc2] if submission.data[:psc_exempt]
+            xml.PSCExemptAsTradingOnUKRegulatedMarket submission.data[:psc3] if submission.data[:psc_exempt]
             xml.ReviewDate Date.today.to_s
             if submission.data[:siccode]
               xml.SICCodes do
