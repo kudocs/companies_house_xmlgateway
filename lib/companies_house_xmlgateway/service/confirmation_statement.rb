@@ -59,8 +59,8 @@ module CompaniesHouseXmlgateway
                   h[:shareholders].each do |s|
                     xml.Shareholders do
                       xml.Name do
-                        xml.Forename s[:first_name]
                         xml.Surname s[:sur_name]
+                        xml.Forename s[:first_name]                        
                       end
                       if s[:is_ser_addr]
                         xml.Address do
