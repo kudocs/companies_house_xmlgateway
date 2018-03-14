@@ -27,16 +27,18 @@ module CompaniesHouseXmlgateway
               xml.StatementOfCapital do
                 submission.data[:capital].each do |c|
                   xml.Capital do                      
-                    xml.TotalAmountUnpaid c[:total_amount_paid]
+                    xml.TotalAmountUnpaid c[:total_amount_unpaid]
                     xml.TotalNumberOfIssuedShares c[:total_shares_issued]
                     xml.ShareCurrency c[:share_currency]
                     xml.TotalAggregateNominalValue c[:total_agg_nominal_value]
-                    xml.Shares do
-                      xml.ShareClass c[:share_class]
-                      xml.PrescribedParticulars c[:particulars]
-                      xml.NumShares c[:num_shares]
-                      xml.AggregateNominalValue c[:agg_nominal_value]
-                    end                     
+                    c[:shares].each do |s|
+                      xml.Shares do
+                        xml.ShareClass s[:share_class]
+                        xml.PrescribedParticulars s[:particulars]
+                        xml.NumShares s[:num_shares]
+                        xml.AggregateNominalValue s[:agg_nominal_value]
+                      end
+                    end
                   end
                 end
               end
@@ -46,10 +48,12 @@ module CompaniesHouseXmlgateway
                 xml.Shareholdings do
                   xml.ShareClass h[:share_class]
                   xml.NumberHeld h[:number_held]
-                  h[:transfers].each do |t|
-                    xml.Transfers do
-                      xml.DateOfTransfer t[:date_of_transfer]
-                      xml.NumberSharesTransferred t[:number_shares_transferred]
+                  if h[:transfers]
+                    h[:transfers].each do |t|
+                      xml.Transfers do
+                        xml.DateOfTransfer t[:date_of_transfer]
+                        xml.NumberSharesTransferred t[:number_shares_transferred]
+                      end
                     end
                   end
                   h[:shareholders].each do |s|
@@ -57,6 +61,17 @@ module CompaniesHouseXmlgateway
                       xml.Name do
                         xml.Forename s[:first_name]
                         xml.Surname s[:sur_name]
+                      end
+                      if s[:is_ser_addr]
+                        xml.Address do
+                          xml.Premise s[:address][:premise]
+                          xml.Street s[:address][:street]
+                          xml.Thoroughfare s[:address][:throughfare]
+                          xml.PostTown s[:address][:post_town]
+                          xml.County s[:address][:county]
+                          xml.Country s[:address][:country]
+                          xml.Postcode s[:address][:postcode]
+                        end
                       end
                     end
                   end
