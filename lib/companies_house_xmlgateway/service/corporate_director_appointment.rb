@@ -57,7 +57,7 @@ module CompaniesHouseXmlgateway
                     end
                   else                  
                     xml.NonEEA do 
-                      if submission.data[:registered_place].nil?
+                      if submission.data[:registered_place].nil? or submission.data[:registered_place].empty?
                       else                      
                         xml.PlaceRegistered submission.data[:registered_place]
                         xml.RegistrationNumber submission.data[:reg_no]
