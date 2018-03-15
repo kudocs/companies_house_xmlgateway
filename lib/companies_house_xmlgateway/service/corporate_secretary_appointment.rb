@@ -55,9 +55,12 @@ module CompaniesHouseXmlgateway
                       xml.RegistrationNumber submission.data[:reg_no]
                     end
                   else                  
-                    xml.NonEEA do 
-                      xml.PlaceRegistered submission.data[:registered_place]
-                      xml.RegistrationNumber submission.data[:reg_no]
+                    xml.NonEEA do
+                      if submission.data[:registered_place].nil? or submission.data[:registered_place].empty?
+                      else
+                        xml.PlaceRegistered submission.data[:registered_place]                     
+                        xml.RegistrationNumber submission.data[:reg_no]
+                      end
                       xml.LawGoverned submission.data[:law_gov]
                       xml.LegalForm submission.data[:legal_form]
                     end
