@@ -58,7 +58,7 @@ module CompaniesHouseXmlgateway
           if !@xml_doc.at_css('Body SubmissionStatus Status IncorporationDetails').nil?
             @xml_doc.css('Body SubmissionStatus Status').each do |status|
               s = {
-                company_number: status.at_css('CompanyNumber').text.strip,
+                company_number: status.at_css('CompanyNumber'),
                 document: status.at_css('IncorporationDetails DocRequestKey'),
                 incorp_date: status.at_css('IncorporationDetails IncorporationDate'),
                 authentication_code: status.at_css('IncorporationDetails AuthenticationCode')              
