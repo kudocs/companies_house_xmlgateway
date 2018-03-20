@@ -53,7 +53,7 @@ module CompaniesHouseXmlgateway
                 comment: status.at_css('Examiner Comment')
               }.transform_values {|v| v.nil? ? nil : v.text.strip }
             }
-            if status.at_css('IncorporationDetails')
+            if status.at_css('Body SubmissionStatus IncorporationDetails')
               s[:incorp] = status.at_css('IncorporationDetails').collect{ |i|
                 {
                  company_number: status.at_css('CompanyNumber').text.strip,
