@@ -72,7 +72,7 @@ module CompaniesHouseXmlgateway
           @xml_doc.css('Body Document').each do |status|
             @document = {
               company_number: status.at_css('CompanyNumber'),
-              doc_date: status.at_css('DocmentDate'),
+              doc_date: status.at_css('DocumentDate'),
               doc_id: status.at_css('DocumentID'),
               doc_data: status.at_css('DocumentData')              
             }.transform_values {|v| v.nil? ? nil : v.text.strip }            
