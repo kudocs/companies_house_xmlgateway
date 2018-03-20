@@ -80,6 +80,7 @@ module CompaniesHouseXmlgateway
             @document << s
           end
         end
+      end
     
       # Extract the Errors from the response XML and return them as an array of hashes
       def parse_errors
