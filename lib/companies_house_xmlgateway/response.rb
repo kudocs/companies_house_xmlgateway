@@ -3,7 +3,7 @@ require 'nokogiri'
 module CompaniesHouseXmlgateway
   class Response
     attr_reader :success, :errors, :statuses, :submission, :response_end_point, :response_poll_interval, 
-                :correlation_id, :gateway_timestamp, :raw_body
+                :correlation_id, :gateway_timestamp, :raw_body, :document
     
     # Create a new Response object using the body of the response returned by Faraday
     def initialize(submission, response)
@@ -65,20 +65,21 @@ module CompaniesHouseXmlgateway
               }.transform_values {|v| v.nil? ? nil : v.text.strip }
               @statuses << s
             end
-          end
-          if !@xml_doc.at_css('Body Document').nil?
-            @xml_doc.css('Body Document').each do |status|
-              s = {
-                company_number: status.at_css('CompanyNumber'),
-                doc_date: status.at_css('DocmentDate'),
-                doc_id: status.at_css('DocumentID'),
-                document: status.at_css('DocumentData')              
-              }.transform_values {|v| v.nil? ? nil : v.text.strip }
-              @statuses << s
-            end
+          end          
+        end
+        
+        unless (node = @xml_doc.at_css('Body Document')).nil?
+          @document = {}
+          @xml_doc.css('Body Document').each do |status|
+            s = {
+              company_number: status.at_css('CompanyNumber'),
+              doc_date: status.at_css('DocmentDate'),
+              doc_id: status.at_css('DocumentID'),
+              doc_data: status.at_css('DocumentData')              
+            }.transform_values {|v| v.nil? ? nil : v.text.strip }
+            @document << s
           end
         end
-      end
     
       # Extract the Errors from the response XML and return them as an array of hashes
       def parse_errors
