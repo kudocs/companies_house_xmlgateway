@@ -59,10 +59,10 @@ module CompaniesHouseXmlgateway
             @xml_doc.css('Body SubmissionStatus Status').each do |status|
               s = {
                 company_number: status.at_css('CompanyNumber').text.strip,
-                authentication_code: status.at_css('IncorporationDetails AuthenticationCode').text.strip,
+                document: status.at_css('IncorporationDetails DocRequestKey'),
                 incorp_date: status.at_css('IncorporationDetails IncorporationDate'),
-                document: status.at_css('IncorporationDetails DocRequestKey') 
-              }
+                authentication_code: status.at_css('IncorporationDetails AuthenticationCode')              
+              }.transform_values {|v| v.nil? ? nil : v.text.strip }
               @statuses << s
             end
           end
