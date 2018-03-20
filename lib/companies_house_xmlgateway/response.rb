@@ -38,7 +38,7 @@ module CompaniesHouseXmlgateway
           @statuses = []
           @xml_doc.css('Body SubmissionStatus Status').each do |status|
             
-              s = {
+            s = {
               submission_id: status.at_css('SubmissionNumber').text.strip,
               status_code: status.at_css('StatusCode').text.strip,
               rejections: status.css('Rejections Reject').collect{ |reject|
@@ -52,19 +52,19 @@ module CompaniesHouseXmlgateway
                 telephone: status.at_css('Examiner Telephone'),
                 comment: status.at_css('Examiner Comment')
               }.transform_values {|v| v.nil? ? nil : v.text.strip }
-            }
-            if status.at_css('Body SubmissionStatus IncorporationDetails')
-              s[:incorp] = status.at_css('IncorporationDetails').collect{ |i|
-                {
-                 company_number: status.at_css('CompanyNumber').text.strip,
-                 authentication_code: i.at_css('AuthenticationCode').text.strip,
-                 incorp_date: i.at_css('IncorporationDate'),
-                 document: i.at_css('DocRequestKey') 
-                }
-              }
-            end
-            
+            }           
             @statuses << s
+          end
+          if !@xml_doc.at_css('Body SubmissionStatus Status IncorporationDetails').nil?
+            @xml_doc.css('Body SubmissionStatus Status').each do |status|
+              s = {
+                company_number: status.at_css('CompanyNumber').text.strip,
+                authentication_code: status.at_css('IncorporationDetails AuthenticationCode').text.strip,
+                incorp_date: status.at_css('IncorporationDetails IncorporationDate'),
+                document: status.at_css('IncorporationDetails DocRequestKey') 
+              }
+              @statuses << s
+            end
           end
         end
       end
