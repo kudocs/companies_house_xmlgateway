@@ -68,16 +68,14 @@ module CompaniesHouseXmlgateway
           end          
         end
         
-        unless (node = @xml_doc.at_css('Body Document')).nil?
-          @document = {}
+        unless (node = @xml_doc.at_css('Body Document')).nil?          
           @xml_doc.css('Body Document').each do |status|
-            s = {
+            @document = {
               company_number: status.at_css('CompanyNumber'),
               doc_date: status.at_css('DocmentDate'),
               doc_id: status.at_css('DocumentID'),
               doc_data: status.at_css('DocumentData')              
-            }.transform_values {|v| v.nil? ? nil : v.text.strip }
-            @document << s
+            }.transform_values {|v| v.nil? ? nil : v.text.strip }            
           end
         end
       end
