@@ -56,8 +56,9 @@ module CompaniesHouseXmlgateway
             @statuses << s
           end
           if !@xml_doc.at_css('Body SubmissionStatus Status IncorporationDetails').nil?
+            s = {}
             @xml_doc.css('Body SubmissionStatus Status').each do |status|
-              s = {
+              s[:incorp] = {
                 company_number: status.at_css('CompanyNumber'),
                 document: status.at_css('IncorporationDetails DocRequestKey'),
                 incorp_date: status.at_css('IncorporationDetails IncorporationDate'),
@@ -65,7 +66,16 @@ module CompaniesHouseXmlgateway
               }.transform_values {|v| v.nil? ? nil : v.text.strip }
               @statuses << s
             end
-          end          
+          end
+          if !@xml_doc.at_css('Body SubmissionStatus Status ChangeOfNameDetails').nil?
+            s = {}
+            @xml_doc.css('Body SubmissionStatus Status').each do |status|              
+              s[:change_name] = {                
+                document: status.at_css('ChangeOfNameDetails DocRequestKey')                  
+              }.transform_values {|v| v.nil? ? nil : v.text.strip }
+              @statuses << s
+            end
+          end            
         end
         
         unless (node = @xml_doc.at_css('Body Document')).nil?          
