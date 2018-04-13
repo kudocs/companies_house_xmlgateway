@@ -41,6 +41,7 @@ module CompaniesHouseXmlgateway
       member_data: CompaniesHouseXmlgateway::Service::MemberData,
       incorporation: CompaniesHouseXmlgateway::Service::Incorporation,
       submission_status_specific: CompaniesHouseXmlgateway::Service::SubmissionStatusSpecific,
+      sail_address: CompaniesHouseXmlgateway::Service::SailAddress,
       get_document: CompaniesHouseXmlgateway::Service::GetDocument
     }
     
