@@ -27,7 +27,7 @@ module CompaniesHouseXmlgateway
               #end
             end
           
-            xml.CountryOfIncorporation 'EW'
+            xml.CountryOfIncorporation submission.data[:location]
             
             xml.RegisteredOfficeAddress do
               xml.Premise submission.data[:office][:premises]
