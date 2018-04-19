@@ -60,9 +60,13 @@ module CompaniesHouseXmlgateway
                   end
                   h[:shareholders].each do |s|
                     xml.Shareholders do
-                      xml.Name do
-                        xml.Surname s[:sur_name]
-                        xml.Forename s[:first_name]                        
+                      if s[:is_a_name]
+                        xml.AmalgamatedName s[:a_name]
+                      else
+                        xml.Name do
+                          xml.Surname s[:sur_name]
+                          xml.Forename s[:first_name]                        
+                        end
                       end
                       if s[:is_ser_addr]
                         xml.Address do
