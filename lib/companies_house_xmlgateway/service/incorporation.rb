@@ -47,6 +47,7 @@ module CompaniesHouseXmlgateway
             submission.data[:appointments].each do |a|
               xml.Appointment do 
                 xml.ConsentToAct true#submission.data[:consent_to_act]
+                if a[:officer_type] == 'director'
                 xml.Director do
                   if a[:is_corp]
                     xml.Corporate do
@@ -141,6 +142,105 @@ module CompaniesHouseXmlgateway
               
                   end
                 end
+              end
+              if a[:officer_type] == 'secretary'
+                #secretary start
+                xml.Secretary do
+                  if a[:is_corp]
+                    xml.Corporate do
+                      xml.CorporateName a[:corporate_name]                
+                      xml.Address do
+                        xml.Premise a[:address][:premise]
+                        xml.Street a[:address][:street]
+                        if a[:address][:thoroughfare]
+                          xml.Thoroughfare a[:address][:thoroughfare]
+                        end
+                        xml.PostTown a[:address][:post_town]
+                             
+                        xml.Country a[:address][:country]
+                        if a[:address][:postcode]
+                          xml.Postcode a[:address][:postcode]
+                        end 
+                
+                        if a[:address][:care_of_name]
+                          xml.CareofName a[:address][:care_of_name]
+                        end
+                        if a[:address][:po_box]
+                          xml.PoBox a[:address][:po_box]
+                        end
+                  
+                      end
+                   
+                      xml.CompanyIdentification do
+                        if a[:is_eea] 
+                          xml.EEA do
+                            xml.PlaceRegistered a[:registered_place]
+                            xml.RegistrationNumber a[:reg_no]
+                          end
+                        else                  
+                          xml.NonEEA do 
+                            xml.PlaceRegistered a[:registered_place]
+                            xml.RegistrationNumber a[:reg_no]
+                            xml.LawGoverned a[:law_gov]
+                            xml.LegalForm a[:legal_form]
+                          end
+                        end
+                      end
+               
+                    end
+                  else
+                    xml.Person do                
+                      xml.Forename a[:forename]#               
+                      xml.Surname a[:surname]
+                      xml.ServiceAddress do
+                        xml.Address do
+                          xml.Premise a[:service_address][:premise]
+                          xml.Street a[:service_address][:street]
+                          if a[:service_address][:thoroughfare]
+                            xml.Thoroughfare a[:service_address][:thoroughfare]
+                          end
+                          xml.PostTown a[:service_address][:post_town]
+                          if a[:service_address][:county]
+                            xml.County a[:service_address][:county]
+                          end                    
+                          xml.Country a[:service_address][:country]
+                          xml.Postcode a[:service_address][:postcode]
+                          if a[:service_address][:care_of_name]
+                            xml.CareofName a[:service_address][:care_of_name]
+                          end
+                          if a[:service_address][:po_box]
+                            xml.PoBox a[:service_address][:po_box]
+                          end                    
+                        end
+                        #                    xml.SameAsRegisteredOffice submission.data[:service_address][:service_addr_same]
+                      end
+#                      xml.DOB a[:dob]
+#                      xml.Nationality a[:nationality]
+#                      xml.Occupation a[:occupation]
+#                      xml.CountryOfResidence a[:country]
+
+#                      xml.ResidentialAddress do
+#                        xml.Address do
+#                          xml.Premise a[:residential_address][:premise]
+#                          xml.Street a[:residential_address][:street]
+#                          if a[:residential_address][:thoroughfare]
+#                            xml.Thoroughfare a[:residential_address][:thoroughfare]
+#                          end
+#                          xml.PostTown a[:residential_address][:post_town]
+#                          if a[:residential_address][:county]
+#                            xml.County a[:residential_address][:county] 
+#                          end
+#                          xml.Country a[:residential_address][:country]
+#                          xml.Postcode a[:residential_address][:postcode]                    
+#                        end
+#                        #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
+#                      end
+                    end
+              
+                  end
+                end
+                #secretary end
+              end
               end
             end #of appointment array
             xml.PSCs do
