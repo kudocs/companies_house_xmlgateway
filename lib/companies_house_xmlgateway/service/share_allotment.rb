@@ -4,7 +4,7 @@ module CompaniesHouseXmlgateway
       API_CLASS_NAME = 'ReturnOfAllotmentShares'
       #SCHEMA_XSD = 'http://xmlalpha.companieshouse.gov.uk/v1-0/schema/forms/ReturnofAllotmentShares-v3-0-rc2.xsd'
       #SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/ReturnofAllotmentShares-v3-0.xsd'
-      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/ReturnofAllotmentShares-v2-5-1.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/ReturnofAllotmentShares-v3-0.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Secretary Appointment action
       def build(submission)
@@ -21,7 +21,7 @@ module CompaniesHouseXmlgateway
             xml.StatementOfCapital do
               #TODO  in future when we handle multiple currency we need to extend the support
               xml.Capital do
-                #xml.TotalAmountUnpaid submission.data[:statement_of_capital][:total_amount_unpaid]
+                xml.TotalAmountUnpaid submission.data[:statement_of_capital][:total_amount_unpaid]
                 xml.TotalNumberOfIssuedShares submission.data[:statement_of_capital][:total_shares]
                 xml.ShareCurrency submission.data[:statement_of_capital][:currency]
                 xml.TotalAggregateNominalValue submission.data[:statement_of_capital][:total_nominal_value]
@@ -31,8 +31,8 @@ module CompaniesHouseXmlgateway
                     xml.ShareClass share[:share_class]
                     xml.PrescribedParticulars share[:pr_particulars]
                     xml.NumShares share[:shares_count] 
-                    xml.AmountPaidDuePerShare share[:paid]
-                    xml.AmountUnpaidPerShare share[:due]
+#                    xml.AmountPaidDuePerShare share[:paid]
+#                    xml.AmountUnpaidPerShare share[:due]
                     xml.AggregateNominalValue  share[:agg_nominal_value]
                   end
                 end
