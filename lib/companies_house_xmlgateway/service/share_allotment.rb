@@ -4,7 +4,7 @@ module CompaniesHouseXmlgateway
       API_CLASS_NAME = 'ReturnOfAllotmentShares'
       #SCHEMA_XSD = 'http://xmlalpha.companieshouse.gov.uk/v1-0/schema/forms/ReturnofAllotmentShares-v3-0-rc2.xsd'
       #SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/ReturnofAllotmentShares-v3-0.xsd'
-      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/ReturnofAllotmentShares-v2-5-1.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/ReturnOfAllotmentShares-v2-5-1.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Secretary Appointment action
       def build(submission)
