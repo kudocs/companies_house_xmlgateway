@@ -30,7 +30,9 @@ module CompaniesHouseXmlgateway
                   xml.Shares do 
                     xml.ShareClass share[:share_class]
                     xml.PrescribedParticulars share[:pr_particulars]
-                    xml.NumShares share[:shares_count]                   
+                    xml.NumShares share[:shares_count] 
+                    xml.AmountPaidDuePerShare share[:paid]
+                    xml.AmountUnpaidPerShare share[:due]
                     xml.AggregateNominalValue  share[:agg_nominal_value]
                   end
                 end
