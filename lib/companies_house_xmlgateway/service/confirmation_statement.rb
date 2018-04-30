@@ -65,7 +65,7 @@ module CompaniesHouseXmlgateway
                           xml.AmalgamatedName s[:a_name]
                         else                        
                           xml.Surname s[:sur_name]
-                          xml.Forename s[:first_name]                        
+                          xml.Forename s[:first_name] if s[:first_name] != ''                     
                         end
                       end
                       if s[:is_ser_addr]
