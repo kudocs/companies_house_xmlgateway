@@ -15,7 +15,7 @@ module CompaniesHouseXmlgateway
             #xml.OfficerAppointment do
             xml.AppointmentDate submission.data[:appointment_date]
             xml.ConsentToAct submission.data[:consent_to_act]
-            xml.Director do
+            xml.Secretary do
               xml.Corporate do
                 xml.CorporateName submission.data[:corporate_name]
                 #xml.Title submission.data[:title]
