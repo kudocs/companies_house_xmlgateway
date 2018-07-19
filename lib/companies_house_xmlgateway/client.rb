@@ -42,8 +42,8 @@ module CompaniesHouseXmlgateway
       incorporation: CompaniesHouseXmlgateway::Service::Incorporation,
       submission_status_specific: CompaniesHouseXmlgateway::Service::SubmissionStatusSpecific,
       sail_address: CompaniesHouseXmlgateway::Service::SailAddress,
-      get_document: CompaniesHouseXmlgateway::Service::GetDocument#,
-      #mortages: CompaniesHouseXmlgateway::Service::Mortgages
+      get_document: CompaniesHouseXmlgateway::Service::GetDocument,
+      mortages: CompaniesHouseXmlgateway::Service::Mortgages
     }
     
     # Define the Perform method for each of the actions supported by the Client
