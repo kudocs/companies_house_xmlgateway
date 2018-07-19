@@ -1,6 +1,6 @@
 module CompaniesHouseXmlgateway
   module Service
-    class Mortgages < CompaniesHouseXmlgateway::Service::BaseName
+    class Mortgages < CompaniesHouseXmlgateway::Service::BaseMortage
       API_CLASS_NAME = 'Mortgages'
       SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/Mortgages-v2-4.xsd'
       
