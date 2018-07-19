@@ -2,7 +2,7 @@ require 'companies_house_xmlgateway/service/base'
 require 'companies_house_xmlgateway/service/form'
 require 'companies_house_xmlgateway/service/base_other'
 require 'companies_house_xmlgateway/service/base_name'
-require 'companies_house_xmlgateway/service/base_mortage'
+#require 'companies_house_xmlgateway/service/base_mortage'
 require 'companies_house_xmlgateway/service/form_other'
 require 'companies_house_xmlgateway/service/form_share'
 require 'companies_house_xmlgateway/service/form_incorp'
@@ -41,7 +41,7 @@ require "companies_house_xmlgateway/service/sail_address"
 require "companies_house_xmlgateway/service/submission_status_specific"
 require "companies_house_xmlgateway/service/acknowledge_submission_status"
 require "companies_house_xmlgateway/service/get_document"
-require "companies_house_xmlgateway/service/mortages"
+#require "companies_house_xmlgateway/service/mortages"
 
 require "companies_house_xmlgateway/version"
 require "companies_house_xmlgateway/config"

@@ -1,0 +1,485 @@
+ <?xml version="1.0"?>
+<GovTalkMessage xmlns="http://www.govtalk.gov.uk/CM/envelope" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:gt="http://www.govtalk.gov.uk/schemas/govtalk/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.govtalk.gov.uk/CM/envelope http://xmlgw.companieshouse.gov.uk/v2-1/schema/Egov_ch-v2-0.xsd">
+  <EnvelopeVersion>1.0</EnvelopeVersion>
+  <Header>
+    <MessageDetails>
+      <Class>CompanyIncorporation</Class>
+      <Qualifier>request</Qualifier>
+      <GatewayTest>1</GatewayTest>
+    </MessageDetails>
+    <SenderDetails>
+      <IDAuthentication>
+        <SenderID>7b33d906fe68ca80bf27f5ddc25a0a32</SenderID>
+        <Authentication>
+          <Method>clear</Method>
+          <Value>1eb869f19ed00d39761dccc456e4be13</Value>
+        </Authentication>
+      </IDAuthentication>
+    </SenderDetails>
+  </Header>
+  <GovTalkDetails>
+    <Keys/>
+  </GovTalkDetails>
+  <Body>
+    <FormSubmission xmlns="http://xmlgw.companieshouse.gov.uk/Header" xmlns:foo="http://xmlgw.companieshouse.gov.uk" xsi:schemaLocation="http://xmlgw.companieshouse.gov.uk/Header http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/FormSubmission-v2-9.xsd">
+      <FormHeader>
+        <CompanyName>SADFSA </CompanyName>
+        <PackageReference>3021</PackageReference>
+        <FormIdentifier>CompanyIncorporation</FormIdentifier>
+        <SubmissionNumber>15188f</SubmissionNumber>
+      </FormHeader>
+      <DateSigned>2018-03-07</DateSigned>
+      <Form>
+        <CompanyIncorporation xmlns="http://xmlgw.companieshouse.gov.uk" xsi:schemaLocation="http://xmlgw.companieshouse.gov.uk http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/CompanyIncorporation-v3-1.xsd">
+          <CompanyType>BYSHR</CompanyType>
+          <RegistersHeldOnPublicRecord>
+            <Directors>false</Directors>
+            <DirectorsURA>false</DirectorsURA>
+            <Secretaries>false</Secretaries>
+            <Members>false</Members>
+            <PSC>
+              <StateNoObjection>true</StateNoObjection>
+            </PSC>
+          </RegistersHeldOnPublicRecord>
+          <CountryOfIncorporation>EW</CountryOfIncorporation>
+          <RegisteredOfficeAddress>
+            <Premise>2345</Premise>
+            <Street>Crescent Grove</Street>
+            <Thoroughfare/>
+            <PostTown>London</PostTown>
+            <County>Greater London</County>
+            <Country>GBR</Country>
+            <Postcode>SW4 1PG</Postcode>
+            <CareofName/>
+            <PoBox/>
+          </RegisteredOfficeAddress>
+          <Appointment>
+            <ConsentToAct>true</ConsentToAct>
+            <Director>
+              <Person>
+                <Forename>Wasif</Forename>
+                <Surname>Khan</Surname>
+                <ServiceAddress>
+                  <Address>
+                    <Premise>2345</Premise>
+                    <Street>Crescent Grove</Street>
+                    <Thoroughfare/>
+                    <PostTown>London</PostTown>
+                    <Country>GBR</Country>
+                    <Postcode>SW4 1PG</Postcode>
+                    <PoBox/>
+                  </Address>
+                </ServiceAddress>
+                <DOB>1987-06-22</DOB>
+                <Nationality>British</Nationality>
+                <Occupation>director</Occupation>
+                <CountryOfResidence>GB-ENG</CountryOfResidence>
+                <ResidentialAddress>
+                  <Address>
+                    <Premise>234</Premise>
+                    <Street>Kryefar road</Street>
+                    <PostTown>London</PostTown>
+                    <County/>
+                    <Country>GB-ENG</Country>
+                    <Postcode>SS11 5HG</Postcode>
+                  </Address>
+                </ResidentialAddress>
+              </Person>
+            </Director>
+          </Appointment>
+          <Appointment>
+            <ConsentToAct>true</ConsentToAct>
+            <Director>
+              <Corporate>
+                <CorporateName>S A AKRAM LTD</CorporateName>
+                <Address>
+                  <Premise>23</Premise>
+                  <Street>Sycamore Drive West</Street>
+                  <PostTown>London</PostTown>
+                  <Country>GB-ENG</Country>
+                  <Postcode>SW2 34g</Postcode>
+                </Address>
+                <CompanyIdentification>
+                  <EEA>
+                    <PlaceRegistered>GB-ENG</PlaceRegistered>
+                    <RegistrationNumber>09527453</RegistrationNumber>
+                  </EEA>
+                </CompanyIdentification>
+              </Corporate>
+            </Director>
+          </Appointment>
+          <Appointment>
+            <ConsentToAct>true</ConsentToAct>
+            <Director>
+              <Corporate>
+                <CorporateName>U LIMITED</CorporateName>
+                <Address>
+                  <Premise>23</Premise>
+                  <Street>Sycamore Drive West</Street>
+                  <PostTown>Langdon hills</PostTown>
+                  <Country>GB-ENG</Country>
+                  <Postcode>SW2 34g</Postcode>
+                </Address>
+                <CompanyIdentification>
+                  <NonEEA>
+                    <PlaceRegistered>GB-ENG</PlaceRegistered>
+                    <RegistrationNumber>03589058</RegistrationNumber>
+                    <LawGoverned>GB</LawGoverned>
+                    <LegalForm>English</LegalForm>
+                  </NonEEA>
+                </CompanyIdentification>
+              </Corporate>
+            </Director>
+          </Appointment>
+          <Appointment>
+            <ConsentToAct>true</ConsentToAct>
+            <Director>
+              <Person>
+                <Forename>Hojojoj</Forename>
+                <Surname>Kowsf</Surname>
+                <ServiceAddress>
+                  <Address>
+                    <Premise>234</Premise>
+                    <Street>jasdetw road</Street>
+                    <PostTown>London</PostTown>
+                    <County/>
+                    <Country>GB-ENG</Country>
+                    <Postcode>SW2 345</Postcode>
+                  </Address>
+                </ServiceAddress>
+                <DOB>1978-06-24</DOB>
+                <Nationality>British</Nationality>
+                <Occupation>director</Occupation>
+                <CountryOfResidence>GB-ENG</CountryOfResidence>
+                <ResidentialAddress>
+                  <Address>
+                    <Premise>345</Premise>
+                    <Street>Wat Tyler Way</Street>
+                    <PostTown>Basildon</PostTown>
+                    <County>Essex</County>
+                    <Country>GB-ENG</Country>
+                    <Postcode>SS16</Postcode>
+                  </Address>
+                </ResidentialAddress>
+              </Person>
+            </Director>
+          </Appointment>
+          <Appointment>
+            <ConsentToAct>true</ConsentToAct>
+            <Director>
+              <Person>
+                <Forename>yui</Forename>
+                <Surname>xcv</Surname>
+                <ServiceAddress>
+                  <Address>
+                    <Premise>234</Premise>
+                    <Street>Wat Tyler Way</Street>
+                    <PostTown>Basildon</PostTown>
+                    <County>Essex</County>
+                    <Country>GB-ENG</Country>
+                    <Postcode>SS16</Postcode>
+                  </Address>
+                </ServiceAddress>
+                <DOB>1980-04-23</DOB>
+                <Nationality>British</Nationality>
+                <Occupation>director</Occupation>
+                <CountryOfResidence>GB-ENG</CountryOfResidence>
+                <ResidentialAddress>
+                  <Address>
+                    <Premise>234</Premise>
+                    <Street>Wat Tyler Way</Street>
+                    <PostTown>Basildon</PostTown>
+                    <County>Essex</County>
+                    <Country>GB-ENG</Country>
+                    <Postcode>SS16</Postcode>
+                  </Address>
+                </ResidentialAddress>
+              </Person>
+            </Director>
+          </Appointment>
+          <PSCs>
+            <PSC>
+              <PSCNotification>
+                <Individual>
+                  <Forename>Wasif</Forename>
+                  <Surname>Khan</Surname>
+                  <ServiceAddress>
+                    <Address>
+                      <Premise>2345</Premise>
+                      <Street>Crescent Grove</Street>
+                      <Thoroughfare/>
+                      <PostTown>London</PostTown>
+                      <Country>GBR</Country>
+                      <Postcode>SW4 1PG</Postcode>
+                      <PoBox/>
+                    </Address>
+                  </ServiceAddress>
+                  <DOB>1987-06-22</DOB>
+                  <Nationality>British</Nationality>
+                  <CountryOfResidence>GB-ENG</CountryOfResidence>
+                  <ResidentialAddress>
+                    <Address>
+                      <Premise>234</Premise>
+                      <Street>Kryefar road</Street>
+                      <PostTown>London</PostTown>
+                      <County/>
+                      <Country>GB-ENG</Country>
+                      <Postcode>SS11 5HG</Postcode>
+                    </Address>
+                  </ResidentialAddress>
+                  <ConsentStatement>true</ConsentStatement>
+                </Individual>
+                <NatureOfControls>
+                  <NatureOfControl>RIGHTTOAPPOINTANDREMOVEDIRECTORS_AS_TRUST</NatureOfControl>
+                </NatureOfControls>
+              </PSCNotification>
+            </PSC>
+            <PSC>
+              <PSCNotification>
+                <Corporate>
+                  <CorporateName>P LIMITED</CorporateName>
+                  <Address>
+                    <Premise>786</Premise>
+                    <Street>Ozonia Way</Street>
+                    <PostTown>Wickford</PostTown>
+                    <Country>GB-ENG</Country>
+                    <Postcode>SS12</Postcode>
+                  </Address>
+                  <PSCCompanyIdentification>
+                    <LawGoverned>US</LawGoverned>
+                    <LegalForm>English</LegalForm>
+                  </PSCCompanyIdentification>
+                </Corporate>
+                <NatureOfControls>
+                  <NatureOfControl>OWNERSHIPOFSHARES_75TO100PERCENT_AS_FIRM</NatureOfControl>
+                </NatureOfControls>
+              </PSCNotification>
+            </PSC>
+            <PSC>
+              <PSCNotification>
+                <Individual>
+                  <Forename>werwer</Forename>
+                  <Surname>sss</Surname>
+                  <ServiceAddress>
+                    <Address>
+                      <Premise>2345</Premise>
+                      <Street>Crescent Grove</Street>
+                      <Thoroughfare/>
+                      <PostTown>London</PostTown>
+                      <Country>GBR</Country>
+                      <Postcode>SW4 1PG</Postcode>
+                      <PoBox/>
+                    </Address>
+                  </ServiceAddress>
+                  <DOB>1987-03-05</DOB>
+                  <Nationality>British</Nationality>
+                  <CountryOfResidence>GB-ENG</CountryOfResidence>
+                  <ResidentialAddress>
+                    <Address>
+                      <Premise>345</Premise>
+                      <Street>Wandsworth Road</Street>
+                      <PostTown>London</PostTown>
+                      <County>Greater London</County>
+                      <Country>GB-ENG</Country>
+                      <Postcode>SW84EP</Postcode>
+                    </Address>
+                  </ResidentialAddress>
+                  <ConsentStatement>true</ConsentStatement>
+                </Individual>
+                <NatureOfControls>
+                  <NatureOfControl>OWNERSHIPOFSHARES_75TO100PERCENT_AS_FIRM</NatureOfControl>
+                </NatureOfControls>
+              </PSCNotification>
+            </PSC>
+          </PSCs>
+          <StatementOfCapital>
+            <Capital>
+              <TotalAmountUnpaid>0</TotalAmountUnpaid>
+              <TotalNumberOfIssuedShares>300</TotalNumberOfIssuedShares>
+              <ShareCurrency>GBP</ShareCurrency>
+              <TotalAggregateNominalValue>3.0</TotalAggregateNominalValue>
+              <Shares>
+                <ShareClass>Ordinary</ShareClass>
+                <PrescribedParticulars>The ordinary shares have full voting rights and rank equally for dividends. On a return of capital, sale or liquidation, the holders of these ordinary shares are entitled to the proceeds equally pro rated to shareholding.</PrescribedParticulars>
+                <NumShares>300</NumShares>
+                <AggregateNominalValue>3.0</AggregateNominalValue>
+              </Shares>
+            </Capital>
+          </StatementOfCapital>
+          <Subscribers>
+            <Person>
+              <Forename>Wasif</Forename>
+              <Surname>Khan</Surname>
+            </Person>
+            <Address>
+              <Premise>2345</Premise>
+              <Street>Crescent Grove</Street>
+              <Thoroughfare/>
+              <PostTown>London</PostTown>
+              <County>Greater London</County>
+              <Country>GBR</Country>
+              <Postcode>SW4 1PG</Postcode>
+            </Address>
+            <Authentication>
+              <PersonalAttribute>BIRTOWN</PersonalAttribute>
+              <PersonalData>wer</PersonalData>
+            </Authentication>
+            <Authentication>
+              <PersonalAttribute>EYE</PersonalAttribute>
+              <PersonalData>wer</PersonalData>
+            </Authentication>
+            <Authentication>
+              <PersonalAttribute>MUM</PersonalAttribute>
+              <PersonalData>wer</PersonalData>
+            </Authentication>
+            <Shares>
+              <ShareClass>Ordinary</ShareClass>
+              <NumShares>140</NumShares>
+              <AmountPaidDuePerShare>1.4</AmountPaidDuePerShare>
+              <AmountUnpaidPerShare>0.0</AmountUnpaidPerShare>
+              <ShareCurrency>GBP</ShareCurrency>
+              <ShareValue>0.01</ShareValue>
+            </Shares>
+          </Subscribers>
+          <Subscribers>
+            <Corporate>
+              <Forename>rty</Forename>
+              <Surname>dfg</Surname>
+              <CorporateName>D LIMITED</CorporateName>
+            </Corporate>
+            <Address>
+              <Premise>234</Premise>
+              <Street>Great Spenders</Street>
+              <Thoroughfare/>
+              <PostTown>Basildon</PostTown>
+              <County>Essex</County>
+              <Country>GB-ENG</Country>
+              <Postcode>ss14</Postcode>
+            </Address>
+            <Authentication>
+              <PersonalAttribute>BIRTOWN</PersonalAttribute>
+              <PersonalData>3tw</PersonalData>
+            </Authentication>
+            <Authentication>
+              <PersonalAttribute>EYE</PersonalAttribute>
+              <PersonalData>hgh</PersonalData>
+            </Authentication>
+            <Authentication>
+              <PersonalAttribute>NATINS</PersonalAttribute>
+              <PersonalData>swe</PersonalData>
+            </Authentication>
+            <Shares>
+              <ShareClass>Ordinary</ShareClass>
+              <NumShares>30</NumShares>
+              <AmountPaidDuePerShare>0.3</AmountPaidDuePerShare>
+              <AmountUnpaidPerShare>0.0</AmountUnpaidPerShare>
+              <ShareCurrency>GBP</ShareCurrency>
+              <ShareValue>0.01</ShareValue>
+            </Shares>
+          </Subscribers>
+          <Subscribers>
+            <Person>
+              <Forename>UIass</Forename>
+              <Surname>werasdf</Surname>
+            </Person>
+            <Address>
+              <Premise>2345</Premise>
+              <Street>Crescent Grove</Street>
+              <Thoroughfare/>
+              <PostTown>London</PostTown>
+              <County>Greater London</County>
+              <Country>GBR</Country>
+              <Postcode>SW4 1PG</Postcode>
+            </Address>
+            <Authentication>
+              <PersonalAttribute>BIRTOWN</PersonalAttribute>
+              <PersonalData>sad</PersonalData>
+            </Authentication>
+            <Authentication>
+              <PersonalAttribute>EYE</PersonalAttribute>
+              <PersonalData>sdf</PersonalData>
+            </Authentication>
+            <Authentication>
+              <PersonalAttribute>PASSNO</PersonalAttribute>
+              <PersonalData>234</PersonalData>
+            </Authentication>
+            <Shares>
+              <ShareClass>Ordinary</ShareClass>
+              <NumShares>60</NumShares>
+              <AmountPaidDuePerShare>0.6</AmountPaidDuePerShare>
+              <AmountUnpaidPerShare>0.0</AmountUnpaidPerShare>
+              <ShareCurrency>GBP</ShareCurrency>
+              <ShareValue>0.01</ShareValue>
+            </Shares>
+          </Subscribers>
+          <Subscribers>
+            <Person>
+              <Forename>Hojojoj</Forename>
+              <Surname>Kowsf</Surname>
+            </Person>
+            <Address>
+              <Premise>234</Premise>
+              <Street>jasdetw road</Street>
+              <Thoroughfare/>
+              <PostTown>London</PostTown>
+              <County/>
+              <Country>GB-ENG</Country>
+              <Postcode>SW2 345</Postcode>
+            </Address>
+            <Authentication>
+              <PersonalAttribute>BIRTOWN</PersonalAttribute>
+              <PersonalData>ada</PersonalData>
+            </Authentication>
+            <Authentication>
+              <PersonalAttribute>MUM</PersonalAttribute>
+              <PersonalData>asd</PersonalData>
+            </Authentication>
+            <Authentication>
+              <PersonalAttribute>PASSNO</PersonalAttribute>
+              <PersonalData>213</PersonalData>
+            </Authentication>
+            <Shares>
+              <ShareClass>Ordinary</ShareClass>
+              <NumShares>70</NumShares>
+              <AmountPaidDuePerShare>0.7</AmountPaidDuePerShare>
+              <AmountUnpaidPerShare>0.0</AmountUnpaidPerShare>
+              <ShareCurrency>GBP</ShareCurrency>
+              <ShareValue>0.01</ShareValue>
+            </Shares>
+          </Subscribers>
+          <Authoriser>
+            <Agent>
+              <Person>
+                <Forename>sdsf</Forename>
+                <Surname>ewrt</Surname>
+              </Person>
+              <Authentication>
+                <PersonalAttribute>BIRTOWN</PersonalAttribute>
+                <PersonalData>sdf</PersonalData>
+              </Authentication>
+              <Authentication>
+                <PersonalAttribute>EYE</PersonalAttribute>
+                <PersonalData>sfs</PersonalData>
+              </Authentication>
+              <Authentication>
+                <PersonalAttribute>PASSNO</PersonalAttribute>
+                <PersonalData>234</PersonalData>
+              </Authentication>
+              <Address>
+                <Premise>324</Premise>
+                <Street>Wandsworth Road</Street>
+                <Thoroughfare/>
+                <PostTown>London</PostTown>
+                <County>Greater London</County>
+                <Country>GB-ENG</Country>
+                <Postcode>SW84EP</Postcode>
+              </Address>
+            </Agent>
+          </Authoriser>
+          <SameDay>true</SameDay>
+          <SICCodes>
+            <SICCode>93120</SICCode>
+          </SICCodes>
+        </CompanyIncorporation>
+      </Form>
+      <Document>

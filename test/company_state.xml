@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<PSCStatementWithdrawal
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns='http://xmlgw.companieshouse.gov.uk'
+    xsi:schemaLocation='http://xmlgw.companieshouse.gov.uk http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/PSCStatementWithdrawal-v1-1.xsd'>
+    <CompanyStatement></CompanyStatement>
+    <WithdrawalDate></WithdrawalDate>
+    <RestrictionsNoticeWithdrawalReason></RestrictionsNoticeWithdrawalReason>
+    <RegisterEntryDate></RegisterEntryDate>
+
+</PSCStatementWithdrawal>

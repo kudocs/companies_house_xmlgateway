@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<GovTalkMessage
+	xmlns="http://www.govtalk.gov.uk/CM/envelope"
+	xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:gt="http://www.govtalk.gov.uk/schemas/govtalk/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.govtalk.gov.uk/CM/envelope http://xmlgw.companieshouse.gov.uk/v2-1/schema/Egov_ch-v2-0.xsd">  
+	<EnvelopeVersion>1.0</EnvelopeVersion>  
+	<Header>    
+		<MessageDetails>      
+			<Class>MembersRegisterDataRequest</Class>      
+			<Qualifier>request</Qualifier>      
+			<TransactionID>1517233158</TransactionID>      
+			<GatewayTest>1</GatewayTest>    
+		</MessageDetails>    
+		<SenderDetails>      
+			<IDAuthentication>        
+				<SenderID>7b33d906fe68ca80bf27f5ddc25a0a32</SenderID>        
+				<Authentication>          
+					<Method>clear</Method>          
+					<Value>1eb869f19ed00d39761dccc456e4be13</Value>        
+				</Authentication>      
+			</IDAuthentication>    
+		</SenderDetails>  
+	</Header>  
+	<GovTalkDetails>    
+		<Keys/>  
+	</GovTalkDetails>  
+	<Body>    
+		<MembersRegisterDataRequest
+			xmlns="http://xmlgw.companieshouse.gov.uk" xsi:schemaLocation="http://xmlgw.companieshouse.gov.uk http://xmlgw.companieshouse.gov.uk/v1-0/schema/MembersRegisterData-v1-0.xsd">      
+			<CompanyNumber>09611371</CompanyNumber>      
+			<CompanyAuthenticationCode>123456</CompanyAuthenticationCode>    
+		</MembersRegisterDataRequest>  
+	</Body>
+</GovTalkMessage>

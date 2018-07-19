@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GovTalkMessage xsi:schemaLocation="http://www.govtalk.gov.uk/schemas/govtalk/govtalkheader http://xmlgw.companieshouse.gov.uk/v1-0/schema/Egov_ch.xsd"
+	xmlns="http://www.govtalk.gov.uk/schemas/govtalk/govtalkheader"
+	xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:gt="http://www.govtalk.gov.uk/schemas/govtalk/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
+	<EnvelopeVersion>1.0</EnvelopeVersion>  
+	<Header>    
+		<MessageDetails>      
+			<Class>NameSearch</Class>      
+			<Qualifier>response</Qualifier>      
+			<TransactionID>1517231642</TransactionID>      
+			<GatewayTimestamp>2018-01-29T13:14:10-00:00</GatewayTimestamp>    
+		</MessageDetails>    
+		<SenderDetails>      
+			<IDAuthentication>        
+				<SenderID>XMLGatewayTestUserID</SenderID>        
+				<Authentication>          
+					<Method>CHMD5</Method>          
+					<Value></Value>        
+				</Authentication>      
+			</IDAuthentication>    
+		</SenderDetails>  
+	</Header>  
+	<GovTalkDetails>    
+		<Keys/>  
+	</GovTalkDetails>  
+	<Body>    
+		<NameSearch
+			xmlns="http://xmlgw.companieshouse.gov.uk/v1-0/schema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlgw.companieshouse.gov.uk/v1-0/schema http://xmlgw.companieshouse.gov.uk/v1-0/schema/NameSearch.xsd">  
+			<SearchRows>20</SearchRows>  
+			<CoSearchItem>    
+				<CompanyName>MILLENNIUM STADIUM PLC</CompanyName>    
+				<CompanyNumber>03176906</CompanyNumber>    
+				<DataSet>LIVE</DataSet>    
+				<CompanyIndexStatus></CompanyIndexStatus>    
+				<CompanyDate></CompanyDate>    
+				<SearchMatch>EXACT</SearchMatch>  
+			</CoSearchItem>
+		</NameSearch>  
+	</Body>
+</GovTalkMessage>

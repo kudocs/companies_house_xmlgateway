@@ -42,8 +42,8 @@ module CompaniesHouseXmlgateway
       incorporation: CompaniesHouseXmlgateway::Service::Incorporation,
       submission_status_specific: CompaniesHouseXmlgateway::Service::SubmissionStatusSpecific,
       sail_address: CompaniesHouseXmlgateway::Service::SailAddress,
-      get_document: CompaniesHouseXmlgateway::Service::GetDocument,
-      mortages: CompaniesHouseXmlgateway::Service::Mortgages
+      get_document: CompaniesHouseXmlgateway::Service::GetDocument#,
+      #mortages: CompaniesHouseXmlgateway::Service::Mortgages
     }
     
     # Define the Perform method for each of the actions supported by the Client
@@ -81,7 +81,7 @@ module CompaniesHouseXmlgateway
       
       service = service_class.new
       submission.xml = service.build(submission)
-      if (service_class.to_s == "CompaniesHouseXmlgateway::Service::NameSearch" or service_class.to_s == "CompaniesHouseXmlgateway::Service::Mortgages") 
+      if service_class.to_s == "CompaniesHouseXmlgateway::Service::NameSearch" 
         make_http_request(submission)
       else
         make_https_request(submission)
