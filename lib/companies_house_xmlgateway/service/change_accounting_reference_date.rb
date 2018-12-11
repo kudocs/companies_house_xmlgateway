@@ -18,7 +18,11 @@ module CompaniesHouseXmlgateway
             if submission.data[:more_yrs]
               xml.FiveYearExtensionDetails do  
                 xml.ExtensionReason submission.data[:ext][:reason]
-                xml.ExtensionAuthorisedCode submission.data[:ext][:au_code]
+                if submission.data[:ext].has_key?([:au_code])
+                  if submission.data[:ext][:au_code] == 'STATE'
+                    xml.ExtensionAuthorisedCode submission.data[:ext][:au_code]
+                  end
+                end
               end
             end
           end
