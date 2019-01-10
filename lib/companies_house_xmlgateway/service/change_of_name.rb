@@ -1,6 +1,6 @@
 module CompaniesHouseXmlgateway
   module Service
-    class ChangeOfName < CompaniesHouseXmlgateway::Service::Form
+    class ChangeOfName < CompaniesHouseXmlgateway::Service::FormNameChange
       API_CLASS_NAME = 'ChangeOfName'
       SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/ChangeOfName-v2-5-1.xsd'
       
