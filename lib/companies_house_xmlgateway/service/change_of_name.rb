@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class ChangeOfName < CompaniesHouseXmlgateway::Service::FormNameChange
       API_CLASS_NAME = 'ChangeOfName'
-      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/ChangeOfName-v2-5-1.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/ChangeOfName-v2-6.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Change Name action
       def build(submission)
