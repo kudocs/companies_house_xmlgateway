@@ -6,6 +6,7 @@ require 'companies_house_xmlgateway/service/base_mortage'
 require 'companies_house_xmlgateway/service/form_other'
 require 'companies_house_xmlgateway/service/form_share'
 require 'companies_house_xmlgateway/service/form_incorp'
+require 'companies_house_xmlgateway/service/form_name_change'
 require "companies_house_xmlgateway/service/change_accounting_reference_date"
 require "companies_house_xmlgateway/service/change_of_address"
 require "companies_house_xmlgateway/service/change_of_name"
