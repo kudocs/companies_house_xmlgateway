@@ -7,7 +7,7 @@ module CompaniesHouseXmlgateway
             'xmlns' => 'http://xmlgw.companieshouse.gov.uk/Header',
             'xmlns:foo' => 'http://xmlgw.companieshouse.gov.uk',
             'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-            'xsi:schemaLocation' => 'http://xmlgw.companieshouse.gov.uk/Header http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/FormSubmission-v2-10.xsd'
+            'xsi:schemaLocation' => 'http://xmlgw.companieshouse.gov.uk/Header http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/FormSubmission-v2-9.xsd'
           ) do
             xml.FormHeader do
               xml.CompanyNumber submission.company[:number]
