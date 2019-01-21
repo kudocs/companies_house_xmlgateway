@@ -6,7 +6,7 @@ module CompaniesHouseXmlgateway
       ENVELOPE_VERSION = '1.0';
       QUALIFIER = 'request';
       AUTHENTICATION_METHOD = 'CHMD5';
-      API_CLASS_NAME = 'FilingHistory'
+      API_CLASS_NAME = 'Base'
       PACKAGE_REFERENCE = '3021'#'0012'
       TRANS_ID = Time.now.to_i
       #<GovTalkMessage xsi:schemaLocation="http://www.govtalk.gov.uk/schemas/govtalk/govtalkheader http://xmlgw.companieshouse.gov.uk/v1-0/schema/Egov_ch.xsd" xmlns="http://www.govtalk.gov.uk/schemas/govtalk/govtalkheader" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:gt="http://www.govtalk.gov.uk/schemas/govtalk/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
