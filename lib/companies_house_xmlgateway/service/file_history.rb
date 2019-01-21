@@ -1,6 +1,6 @@
 module CompaniesHouseXmlgateway
   module Service
-    class FileHistory < CompaniesHouseXmlgateway::Service::BaseName
+    class FileHistory < CompaniesHouseXmlgateway::Service::FileBase
       API_CLASS_NAME = 'FileHistory'
       SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/FilingHistory-v2-1.xsd'
       
