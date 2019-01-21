@@ -37,6 +37,7 @@ module CompaniesHouseXmlgateway
       corporate_psc_cessation: CompaniesHouseXmlgateway::Service::CorporatePscCessation,
       corporate_psc_change_details: CompaniesHouseXmlgateway::Service::CorporatePscChangeDetails,
       name_search: CompaniesHouseXmlgateway::Service::NameSearch,
+      file_history: CompaniesHouseXmlgateway::Service::FileHistory,
       company_data: CompaniesHouseXmlgateway::Service::CompanyData,
       member_data: CompaniesHouseXmlgateway::Service::MemberData,
       incorporation: CompaniesHouseXmlgateway::Service::Incorporation,
