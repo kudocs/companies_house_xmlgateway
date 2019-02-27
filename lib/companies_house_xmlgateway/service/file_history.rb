@@ -13,7 +13,7 @@ module CompaniesHouseXmlgateway
             'xsi:schemaLocation' => "#{SCHEMA_XSD}"
           ) do
              xml.CompanyNumber submission.data[:company_number]
-             #xml.CapitalDocInd 0    
+             xml.CapitalDocInd 0    
           end
         end
       end
