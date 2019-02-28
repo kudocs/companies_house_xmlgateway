@@ -39,6 +39,7 @@ module CompaniesHouseXmlgateway
       name_search: CompaniesHouseXmlgateway::Service::NameSearch,
       file_history: CompaniesHouseXmlgateway::Service::FileHistory,
       document_info: CompaniesHouseXmlgateway::Service::DocumentInfo,
+      document_request: CompaniesHouseXmlgateway::Service::DocumentRequest,
       company_data: CompaniesHouseXmlgateway::Service::CompanyData,
       member_data: CompaniesHouseXmlgateway::Service::MemberData,
       incorporation: CompaniesHouseXmlgateway::Service::Incorporation,
@@ -83,7 +84,7 @@ module CompaniesHouseXmlgateway
       
       service = service_class.new
       submission.xml = service.build(submission)
-      if (service_class.to_s == "CompaniesHouseXmlgateway::Service::NameSearch" or service_class.to_s == "CompaniesHouseXmlgateway::Service::Mortgages" or service_class.to_s == "CompaniesHouseXmlgateway::Service::FileHistory")
+      if (service_class.to_s == "CompaniesHouseXmlgateway::Service::NameSearch" or service_class.to_s == "CompaniesHouseXmlgateway::Service::Mortgages" or service_class.to_s == "CompaniesHouseXmlgateway::Service::FileHistory" or service_class.to_s == "CompaniesHouseXmlgateway::Service::DocumentInfo" or service_class.to_s == "CompaniesHouseXmlgateway::Service::DocumentRequest")
         make_http_request(submission)
       else
         make_https_request(submission)
