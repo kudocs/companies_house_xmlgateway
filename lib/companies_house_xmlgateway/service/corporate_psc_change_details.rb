@@ -30,8 +30,12 @@ module CompaniesHouseXmlgateway
                   xml.PostTown submission.data[:address][:post_town]
                   #                    if submission.data[:service_address][:county]
                   #                     xml.County submission.data[:service_address][:county]
-                  #                    end                    
-                  xml.Country submission.data[:address][:country]
+                  #                    end    
+                  if submission.data[:address].has_key?(:other_country)
+                    xml.OtherForeignCountry submission.data[:address][:other_country]
+                  else
+                    xml.Country submission.data[:address][:country]
+                  end
                   #xml.Postcode submission.data[:service_address][:postcode]
                   if submission.data[:address][:care_of_name]
                     xml.CareofName submission.data[:address][:care_of_name]

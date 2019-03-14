@@ -19,8 +19,12 @@ module CompaniesHouseXmlgateway
                 if submission.data[:thoroughfare]
                   xml.Thoroughfare submission.data[:thoroughfare]
                 end
-                xml.PostTown submission.data[:post_town]                          
-                xml.Country submission.data[:country]
+                xml.PostTown submission.data[:post_town]
+                if submission.data.has_key?(:other_country)
+                  xml.OtherForeignCountry submission.data[:other_country]
+                else
+                  xml.Country submission.data[:country]
+                end
                 if submission.data[:postcode]
                     xml.Postcode submission.data[:postcode]
                 end 
