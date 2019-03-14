@@ -35,7 +35,7 @@ module CompaniesHouseXmlgateway
                   #                    if submission.data[:service_address][:county]
                   #                     xml.County submission.data[:service_address][:county]
                   #                    end 
-                  if submission.data[:address].has_key?[:other_country]
+                  if submission.data[:address].has_key?([:other_country])
                     xml.OtherForeignCountry submission.data[:address][:other_country]
                   else
                     xml.Country submission.data[:address][:country]
