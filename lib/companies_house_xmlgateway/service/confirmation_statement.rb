@@ -20,9 +20,11 @@ module CompaniesHouseXmlgateway
             xml.PSCExemptAsTradingOnUKRegulatedMarket submission.data[:psc3]
             end
             xml.ReviewDate Date.today.to_s
-            if submission.data[:siccode]
+            if submission.data[:sic_codes]
               xml.SICCodes do
-                xml.SICCode submission.data[:siccode]
+                submission.data[:sic_codes].each do |c|
+                  xml.SICCode c
+                end
               end
             end
             if submission.data[:capital]
