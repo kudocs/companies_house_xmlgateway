@@ -59,8 +59,11 @@ module CompaniesHouseXmlgateway
                           xml.Thoroughfare a[:address][:thoroughfare]
                         end
                         xml.PostTown a[:address][:post_town]
-                             
-                        xml.Country a[:address][:country]
+                        if a[:address].has_key?(:other_country)
+                            xml.OtherForeignCountry a[:address][:other_country]
+                          else     
+                            xml.Country a[:address][:country]
+                          end
                         if a[:address][:postcode]
                           xml.Postcode a[:address][:postcode]
                         end 
@@ -105,8 +108,12 @@ module CompaniesHouseXmlgateway
                           xml.PostTown a[:service_address][:post_town]
                           if a[:service_address][:county]
                             xml.County a[:service_address][:county]
-                          end                    
-                          xml.Country a[:service_address][:country]
+                          end   
+                          if a[:service_address].has_key?(:other_country)
+                              xml.OtherForeignCountry a[:service_address][:other_country]
+                            else   
+                              xml.Country a[:service_address][:country]
+                            end
                           xml.Postcode a[:service_address][:postcode]
                           if a[:service_address][:care_of_name]
                             xml.CareofName a[:service_address][:care_of_name]
@@ -133,7 +140,11 @@ module CompaniesHouseXmlgateway
                           if a[:residential_address][:county]
                             xml.County a[:residential_address][:county] 
                           end
-                          xml.Country a[:residential_address][:country]
+                          if a[:residential_address].has_key?(:other_country)
+                              xml.OtherForeignCountry a[:residential_address][:other_country]
+                            else   
+                              xml.Country a[:residential_address][:country]
+                            end
                           xml.Postcode a[:residential_address][:postcode]                    
                         end
                         #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
@@ -156,8 +167,11 @@ module CompaniesHouseXmlgateway
                           xml.Thoroughfare a[:address][:thoroughfare]
                         end
                         xml.PostTown a[:address][:post_town]
-                             
-                        xml.Country a[:address][:country]
+                        if a[:address].has_key?(:other_country)
+                            xml.OtherForeignCountry a[:address][:other_country]
+                          else     
+                            xml.Country a[:address][:country]
+                          end
                         if a[:address][:postcode]
                           xml.Postcode a[:address][:postcode]
                         end 
@@ -202,8 +216,12 @@ module CompaniesHouseXmlgateway
                           xml.PostTown a[:service_address][:post_town]
                           if a[:service_address][:county]
                             xml.County a[:service_address][:county]
-                          end                    
-                          xml.Country a[:service_address][:country]
+                          end 
+                          if a[:service_address].has_key?(:other_country)
+                              xml.OtherForeignCountry a[:service_address][:other_country]
+                            else   
+                              xml.Country a[:service_address][:country]
+                            end
                           xml.Postcode a[:service_address][:postcode]
                           if a[:service_address][:care_of_name]
                             xml.CareofName a[:service_address][:care_of_name]
@@ -258,8 +276,11 @@ module CompaniesHouseXmlgateway
                             xml.Thoroughfare p[:address][:thoroughfare]
                           end
                           xml.PostTown p[:address][:post_town]
-                                 
-                          xml.Country p[:address][:country]
+                          if p[:address].has_key?(:other_country)
+                            xml.OtherForeignCountry p[:address][:other_country]
+                          else       
+                            xml.Country p[:address][:country]
+                          end
                           if p[:address][:postcode]
                             xml.Postcode p[:address][:postcode]
                           end 
@@ -304,8 +325,12 @@ module CompaniesHouseXmlgateway
                             xml.PostTown p[:service_address][:post_town]
                             if p[:service_address][:county]
                               xml.County p[:service_address][:county]
-                            end                    
-                            xml.Country p[:service_address][:country]
+                            end  
+                            if p[:service_address].has_key?(:other_country)
+                              xml.OtherForeignCountry p[:service_address][:other_country]
+                            else   
+                              xml.Country p[:service_address][:country]
+                            end
                             xml.Postcode p[:service_address][:postcode]
                             if p[:service_address][:care_of_name]
                               xml.CareofName p[:service_address][:care_of_name]
@@ -331,7 +356,11 @@ module CompaniesHouseXmlgateway
                             if p[:residential_address][:county]
                               xml.County p[:residential_address][:county] 
                             end
-                            xml.Country p[:residential_address][:country]
+                            if p[:residential_address].has_key?(:other_country)
+                              xml.OtherForeignCountry p[:residential_address][:other_country]
+                            else   
+                              xml.Country p[:residential_address][:country]
+                            end
                             xml.Postcode p[:residential_address][:postcode]                 
                           end
                           # xml.SameAsRegisteredOffice p[:residential_address][:residential_addr_same]
@@ -391,7 +420,11 @@ module CompaniesHouseXmlgateway
                   xml.Thoroughfare s[:address][:throughfare]
                   xml.PostTown s[:address][:post_town]
                   xml.County s[:address][:county]
-                  xml.Country s[:address][:country]
+                  if s[:address].has_key?(:other_country)
+                    xml.OtherForeignCountry s[:address][:other_country]
+                  else   
+                    xml.Country s[:address][:country]
+                  end
                   xml.Postcode s[:address][:postcode]
                 end
                 #array one
@@ -436,7 +469,11 @@ module CompaniesHouseXmlgateway
                     xml.Thoroughfare g[:address][:throughfare]
                     xml.PostTown g[:address][:post_town]
                     xml.County g[:address][:county]
-                    xml.Country g[:address][:country]
+                    if g[:address].has_key?(:other_country)
+                      xml.OtherForeignCountry g[:address][:other_country]
+                    else   
+                      xml.Country g[:address][:country]
+                    end
                     xml.Postcode g[:address][:postcode]
                   end
                   g[:auth].each do |sa|
@@ -477,7 +514,11 @@ module CompaniesHouseXmlgateway
                     xml.Thoroughfare submission.data[:agent][:address][:throughfare]
                     xml.PostTown submission.data[:agent][:address][:post_town]
                     xml.County submission.data[:agent][:address][:county]
-                    xml.Country submission.data[:agent][:address][:country]
+                    if submission.data[:agent][:address].has_key?(:other_country)
+                      xml.OtherForeignCountry submission.data[:agent][:address][:other_country]
+                    else 
+                      xml.Country submission.data[:agent][:address][:country]
+                    end
                     xml.Postcode submission.data[:agent][:address][:postcode]
                   end
                 end
