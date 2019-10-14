@@ -48,12 +48,12 @@ module CompaniesHouseXmlgateway
                   #                  
                   xml.CompanyIdentification do
                     if submission.data[:eea] 
-                      xml.EEA do
-                        xml.PlaceRegistered submission.data[:registered_place]
+                      xml.UK do
+                        #xml.PlaceRegistered submission.data[:registered_place]
                         xml.RegistrationNumber submission.data[:reg_no]
                       end
                     else                  
-                      xml.NonEEA do 
+                      xml.NonUK do 
                         if submission.data[:registered_place].nil? or submission.data[:registered_place].empty?
                         else
                           xml.PlaceRegistered submission.data[:registered_place]
