@@ -79,12 +79,12 @@ module CompaniesHouseXmlgateway
                    
                       xml.CompanyIdentification do
                         if a[:is_eea] 
-                          xml.EEA do
-                            xml.PlaceRegistered a[:registered_place]
+                          xml.UK do
+                            #xml.PlaceRegistered a[:registered_place]
                             xml.RegistrationNumber a[:reg_no]
                           end
                         else                  
-                          xml.NonEEA do 
+                          xml.NonUK do 
                             xml.PlaceRegistered a[:registered_place]
                             xml.RegistrationNumber a[:reg_no]
                             xml.LawGoverned a[:law_gov]
@@ -187,12 +187,12 @@ module CompaniesHouseXmlgateway
                    
                       xml.CompanyIdentification do
                         if a[:is_eea] 
-                          xml.EEA do
-                            xml.PlaceRegistered a[:registered_place]
+                          xml.UK do
+                            #xml.PlaceRegistered a[:registered_place]
                             xml.RegistrationNumber a[:reg_no]
                           end
                         else                  
-                          xml.NonEEA do 
+                          xml.NonUK do 
                             xml.PlaceRegistered a[:registered_place]
                             xml.RegistrationNumber a[:reg_no]
                             xml.LawGoverned a[:law_gov]
