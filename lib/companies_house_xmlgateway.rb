@@ -47,7 +47,7 @@ require "companies_house_xmlgateway/service/submission_status_specific"
 require "companies_house_xmlgateway/service/acknowledge_submission_status"
 require "companies_house_xmlgateway/service/get_document"
 require "companies_house_xmlgateway/service/mortages"
-
+require "companies_house_xmlgateway/service/accounts"
 require "companies_house_xmlgateway/version"
 require "companies_house_xmlgateway/config"
 require "companies_house_xmlgateway/client"
