@@ -1,6 +1,7 @@
 module CompaniesHouseXmlgateway
   module Service
     class Accounts < CompaniesHouseXmlgateway::Service::Base
+      API_CLASS_NAME = 'AccountsImage'
       def build(submission)
         super do |xml|
           xml.FormSubmission(
