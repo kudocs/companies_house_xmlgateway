@@ -18,14 +18,14 @@ module CompaniesHouseXmlgateway
             xml.DateSigned Date.today.to_s
             xml.Form do
             end
-            submission.company[:docs].each do |d|
+            
               xml.Document do
-                xml.Data d[:doc_data]
+                xml.Data submission.data[:doc_data]
                 xml.Filename 'accounts'
                 xml.ContentType "application/pdf"
                 xml.Category 'ACCOUNTS'
               end
-            end
+            
           end          
         end
       end
