@@ -57,6 +57,13 @@ module CompaniesHouseXmlgateway
       end
     end
     
+    # Define the Preview method for each of the actions supported by the Client
+    ACTIONS.each do |k, v|
+      define_method "preview_#{k}" do |company, data|
+        preview_action(v, company, data)
+      end
+    end
+    
     # Return statuses for submissions previously sent using the clients Presenter ID (MAX 20 submissions per request)
     def get_submission_status
       submission = CompaniesHouseXmlgateway::StatusSubmission.new
@@ -91,6 +98,14 @@ module CompaniesHouseXmlgateway
         make_https_request(submission)
       end
     end
+    
+      # Create a Submission preview record
+      def preview_action(service_class, company, data)
+        submission = CompaniesHouseXmlgateway::FormSubmission.new(company, data)        
+        service = service_class.new
+        submission.xml = service.build(submission)
+        return submission
+      end 
     
       # Use Faraday to send the submission document to the Gateway
       def make_http_request(submission)
