@@ -21,13 +21,16 @@ module CompaniesHouseXmlgateway
               xml.ContactName submission.company[:contact_name]
               xml.ContactNumber submission.company[:contact_number]
             end
-            xml.DateSigned Date.today.to_s
+            xml.Authority do
+              xml.Designation 'DIR'
+              xml.DateSigned Date.today.to_s 
+            end            
             xml.Form do
             end            
               xml.Document do
                 xml.Data submission.data[:doc_data]
-                xml.Filename 'accounts'
-                xml.ContentType "application/pdf"
+                xml.Filename 'Accounts.xml'
+                xml.ContentType "application/xml"
                 xml.Category 'ACCOUNTS'
               end            
           end          
