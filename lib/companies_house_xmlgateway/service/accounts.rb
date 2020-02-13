@@ -1,7 +1,7 @@
 module CompaniesHouseXmlgateway
   module Service
     class Accounts < CompaniesHouseXmlgateway::Service::Base
-      API_CLASS_NAME = 'AccountsImage'
+      API_CLASS_NAME = 'Accounts'
       def build(submission)
         super do |xml|
           xml.FormSubmission(
@@ -21,10 +21,10 @@ module CompaniesHouseXmlgateway
               xml.ContactName submission.company[:contact_name]
               xml.ContactNumber submission.company[:contact_number]
             end
-            xml.Authority do
-              xml.Designation 'DIR'
+            #xml.Authority do
+              #xml.Designation 'DIR'
               xml.DateSigned Date.today.to_s 
-            end            
+            #end            
             xml.Form do
             end            
               xml.Document do
