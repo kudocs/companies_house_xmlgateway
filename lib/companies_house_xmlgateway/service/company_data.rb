@@ -13,7 +13,7 @@ module CompaniesHouseXmlgateway
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
            xml.CompanyNumber submission.data[:number]
-           if submission.has_key?(:company_prefix)
+           if submission.data[:company_prefix]
              xml.CompanyType submission.data[:company_prefix]
            end
            xml.CompanyAuthenticationCode submission.data[:auth_code]
