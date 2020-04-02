@@ -47,7 +47,8 @@ module CompaniesHouseXmlgateway
       sail_address: CompaniesHouseXmlgateway::Service::SailAddress,
       get_document: CompaniesHouseXmlgateway::Service::GetDocument,
       mortages: CompaniesHouseXmlgateway::Service::Mortgages,
-      accounts: CompaniesHouseXmlgateway::Service::Accounts
+      accounts: CompaniesHouseXmlgateway::Service::Accounts,
+      change_of_location: CompaniesHouseXmlgateway::Service::ChangeOfLocation
     }
     
     # Define the Perform method for each of the actions supported by the Client
