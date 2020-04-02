@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class ChangeOfLocation < CompaniesHouseXmlgateway::Service::Form
       API_CLASS_NAME = 'RecordChangeOfLocation'
-      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/SailAddress-v2-5.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/RecordChangeofLocation-v2-7.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Change Ref Date action
       def build(submission)
