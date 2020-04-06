@@ -77,6 +77,9 @@ module CompaniesHouseXmlgateway
                     #xml.CareofName submission.data[:residential_address][:care_of_name]
                     #xml.PoBox submission.data[:residential_address][:po_box]  
                     end
+                    if submission.data[:section_243]
+                      xml.SecureAddressInd true
+                    end
 #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
                   end
                 end

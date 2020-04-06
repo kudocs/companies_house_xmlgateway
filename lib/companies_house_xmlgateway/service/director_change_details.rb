@@ -70,7 +70,10 @@ module CompaniesHouseXmlgateway
                         xml.Country submission.data[:residential_address][:country]
                       end
                       xml.Postcode submission.data[:residential_address][:postcode]
-                   
+                      
+                    end
+                    if submission.data[:section_243]
+                      xml.SecureAddressInd true
                     end
                     #                    xml.SameAsRegisteredOffice submission.data[:residential_address][:residential_addr_same]
                   end
