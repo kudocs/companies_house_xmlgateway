@@ -13,19 +13,19 @@ module CompaniesHouseXmlgateway
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
             xml.CompanyType submission.data[:company_type]
-            xml.RegistersHeldOnPublicRecord do
-              xml.LLPMembers submission.data[:is_llp_reg] if submission.data[:is_llp_reg]
-              xml.LLPMembersURA submission.data[:is_llp_ura_reg] if submission.data[:is_llp_ura_reg]
-              xml.Directors false#submission.data[:is_dir_reg] if submission.data[:is_dir_reg]
-              xml.DirectorsURA false#submission.data[:is_dir_ura_reg] if submission.data[:is_dir_ura_reg]
-              xml.Secretaries false#submission.data[:is_sec_reg] if submission.data[:is_sec_reg]
-              xml.Members false#submission.data[:is_mem_reg] if submission.data[:is_mem_reg]
-              #if submission.data[:is_psc_reg]
-                xml.PSC do
-                  xml.StateNoObjection true
-                end
-              #end
-            end
+#            xml.RegistersHeldOnPublicRecord do
+#              xml.LLPMembers submission.data[:is_llp_reg] if submission.data[:is_llp_reg]
+#              xml.LLPMembersURA submission.data[:is_llp_ura_reg] if submission.data[:is_llp_ura_reg]
+#              xml.Directors false#submission.data[:is_dir_reg] if submission.data[:is_dir_reg]
+#              xml.DirectorsURA false#submission.data[:is_dir_ura_reg] if submission.data[:is_dir_ura_reg]
+#              xml.Secretaries false#submission.data[:is_sec_reg] if submission.data[:is_sec_reg]
+#              xml.Members false#submission.data[:is_mem_reg] if submission.data[:is_mem_reg]
+#              #if submission.data[:is_psc_reg]
+#                xml.PSC do
+#                  xml.StateNoObjection true
+#                end
+#              #end
+#            end
           
             xml.CountryOfIncorporation submission.data[:location]
             
