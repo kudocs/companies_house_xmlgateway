@@ -22,7 +22,7 @@ module CompaniesHouseXmlgateway
             submission.company[:docs].each do |d|
               xml.Document do
                 xml.Data d[:doc_data]
-                xml.Data d[:doc_bespoke] if d[:doc_bespoke]
+                #xml.Data d[:doc_bespoke] if d[:doc_bespoke]
                 xml.Filename d[:doc_name]
                 xml.ContentType "application/pdf"
                 xml.Category d[:doc_cat]
