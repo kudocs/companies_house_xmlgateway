@@ -262,6 +262,9 @@ module CompaniesHouseXmlgateway
               end
             end #of appointment array
             xml.PSCs do
+              if submission.data[:no_psc]
+                xml.NoPSCStatement "NO_INDIVIDUAL_OR_ENTITY_WITH_SIGNFICANT_CONTROL"
+              else
               submission.data[:pscs].each do |p|
                 xml.PSC do
                   xml.PSCNotification do
@@ -378,6 +381,7 @@ module CompaniesHouseXmlgateway
 #                    xml.RegisterEntryDate p[:register_entry_date]                 
                   end
                 end #of psc array
+              end
               end
             end#PSC end
             #shareholdings start
