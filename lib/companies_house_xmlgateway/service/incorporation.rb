@@ -387,13 +387,14 @@ module CompaniesHouseXmlgateway
             #shareholdings start
             xml.StatementOfCapital do
               #TODO  in future when we handle multiple currency we need to extend the support
+              submission.data[:statement_of_capital].each do |c|
               xml.Capital do
-                xml.TotalAmountUnpaid submission.data[:statement_of_capital][:total_amount_unpaid]
-                xml.TotalNumberOfIssuedShares submission.data[:statement_of_capital][:total_shares]
-                xml.ShareCurrency submission.data[:statement_of_capital][:currency]
-                xml.TotalAggregateNominalValue submission.data[:statement_of_capital][:total_nominal_value]
+                xml.TotalAmountUnpaid c[:total_amount_unpaid]
+                xml.TotalNumberOfIssuedShares c[:total_shares]
+                xml.ShareCurrency c[:currency]
+                xml.TotalAggregateNominalValue c[:total_nominal_value]
                 #Total available shares along with the allotment
-                submission.data[:statement_of_capital][:shares].each do |share|
+                c[:shares].each do |share|
                   xml.Shares do 
                     xml.ShareClass share[:share_class]
                     xml.PrescribedParticulars share[:pr_particulars]
@@ -402,6 +403,7 @@ module CompaniesHouseXmlgateway
                   end
                 end
               end
+            end
             end #shareholdings end  
             #start of subscribers
             submission.data[:subscribers].each do |s|
