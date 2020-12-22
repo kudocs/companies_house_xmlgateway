@@ -13,19 +13,19 @@ module CompaniesHouseXmlgateway
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
             xml.CompanyType submission.data[:company_type]
-            xml.RegistersHeldOnPublicRecord do
-              xml.LLPMembers submission.data[:is_llp_reg] if submission.data[:is_llp_reg]
-              xml.LLPMembersURA submission.data[:is_llp_ura_reg] if submission.data[:is_llp_ura_reg]
-              xml.Directors false#submission.data[:is_dir_reg] if submission.data[:is_dir_reg]
-              xml.DirectorsURA false#submission.data[:is_dir_ura_reg] if submission.data[:is_dir_ura_reg]
-              xml.Secretaries false#submission.data[:is_sec_reg] if submission.data[:is_sec_reg]
-              xml.Members false#submission.data[:is_mem_reg] if submission.data[:is_mem_reg]
-              #if submission.data[:is_psc_reg]
-                xml.PSC do
-                  xml.StateNoObjection true
-                end
-              #end
-            end
+#            xml.RegistersHeldOnPublicRecord do
+#              xml.LLPMembers submission.data[:is_llp_reg] if submission.data[:is_llp_reg]
+#              xml.LLPMembersURA submission.data[:is_llp_ura_reg] if submission.data[:is_llp_ura_reg]
+#              xml.Directors false#submission.data[:is_dir_reg] if submission.data[:is_dir_reg]
+#              xml.DirectorsURA false#submission.data[:is_dir_ura_reg] if submission.data[:is_dir_ura_reg]
+#              xml.Secretaries false#submission.data[:is_sec_reg] if submission.data[:is_sec_reg]
+#              xml.Members false#submission.data[:is_mem_reg] if submission.data[:is_mem_reg]
+#              #if submission.data[:is_psc_reg]
+#                xml.PSC do
+#                  xml.StateNoObjection true
+#                end
+#              #end
+#            end
           
             xml.CountryOfIncorporation submission.data[:location]
             
@@ -262,6 +262,9 @@ module CompaniesHouseXmlgateway
               end
             end #of appointment array
             xml.PSCs do
+              if submission.data[:no_psc]
+                xml.NoPSCStatement "NO_INDIVIDUAL_OR_ENTITY_WITH_SIGNFICANT_CONTROL"
+              else
               submission.data[:pscs].each do |p|
                 xml.PSC do
                   xml.PSCNotification do
@@ -379,17 +382,19 @@ module CompaniesHouseXmlgateway
                   end
                 end #of psc array
               end
+              end
             end#PSC end
             #shareholdings start
             xml.StatementOfCapital do
               #TODO  in future when we handle multiple currency we need to extend the support
+              submission.data[:statement_of_capital].each do |c|
               xml.Capital do
-                xml.TotalAmountUnpaid submission.data[:statement_of_capital][:total_amount_unpaid]
-                xml.TotalNumberOfIssuedShares submission.data[:statement_of_capital][:total_shares]
-                xml.ShareCurrency submission.data[:statement_of_capital][:currency]
-                xml.TotalAggregateNominalValue submission.data[:statement_of_capital][:total_nominal_value]
+                xml.TotalAmountUnpaid c[:total_amount_unpaid]
+                xml.TotalNumberOfIssuedShares c[:total_shares]
+                xml.ShareCurrency c[:currency]
+                xml.TotalAggregateNominalValue c[:total_nominal_value]
                 #Total available shares along with the allotment
-                submission.data[:statement_of_capital][:shares].each do |share|
+                c[:shares].each do |share|
                   xml.Shares do 
                     xml.ShareClass share[:share_class]
                     xml.PrescribedParticulars share[:pr_particulars]
@@ -398,6 +403,7 @@ module CompaniesHouseXmlgateway
                   end
                 end
               end
+            end
             end #shareholdings end  
             #start of subscribers
             submission.data[:subscribers].each do |s|

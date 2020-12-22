@@ -46,13 +46,22 @@ module CompaniesHouseXmlgateway
       submission_status_specific: CompaniesHouseXmlgateway::Service::SubmissionStatusSpecific,
       sail_address: CompaniesHouseXmlgateway::Service::SailAddress,
       get_document: CompaniesHouseXmlgateway::Service::GetDocument,
-      mortages: CompaniesHouseXmlgateway::Service::Mortgages
+      mortages: CompaniesHouseXmlgateway::Service::Mortgages,
+      accounts: CompaniesHouseXmlgateway::Service::Accounts,
+      change_of_location: CompaniesHouseXmlgateway::Service::ChangeOfLocation
     }
     
     # Define the Perform method for each of the actions supported by the Client
     ACTIONS.each do |k, v|
       define_method "perform_#{k}" do |company, data|
         perform_action(v, company, data)
+      end
+    end
+    
+    # Define the Preview method for each of the actions supported by the Client
+    ACTIONS.each do |k, v|
+      define_method "preview_#{k}" do |company, data|
+        preview_action(v, company, data)
       end
     end
     
@@ -90,6 +99,14 @@ module CompaniesHouseXmlgateway
         make_https_request(submission)
       end
     end
+    
+      # Create a Submission preview record
+      def preview_action(service_class, company, data)
+        submission = CompaniesHouseXmlgateway::FormSubmission.new(company, data)        
+        service = service_class.new
+        submission.xml = service.build(submission)
+        return submission
+      end 
     
       # Use Faraday to send the submission document to the Gateway
       def make_http_request(submission)
