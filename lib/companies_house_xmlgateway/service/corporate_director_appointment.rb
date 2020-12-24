@@ -8,9 +8,9 @@ module CompaniesHouseXmlgateway
       def build(submission)
         super do |xml|
           xml.OfficerAppointment(
-            'xmlns' => 'http://xmlgw.companieshouse.gov.uk',
+            'xmlns' => 'http://xmlbeta.companieshouse.gov.uk',
             'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-            'xsi:schemaLocation' => "http://xmlbeta.companieshouse.gov.uk/v1-0/xmlgw/Gateway #{SCHEMA_XSD}"
+            'xsi:schemaLocation' => "http://xmlbeta.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
             #xml.OfficerAppointment do
             xml.AppointmentDate submission.data[:appointment_date]
