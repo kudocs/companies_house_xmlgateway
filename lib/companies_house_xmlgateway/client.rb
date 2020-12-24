@@ -5,7 +5,7 @@ module CompaniesHouseXmlgateway
   class Client
     attr_accessor :timeout, :logger
     
-    API_HTTPS_URL = 'https://xmlgw.companieshouse.gov.uk'
+    API_HTTPS_URL = 'https://xmlbeta.companieshouse.gov.uk/v1-0/xmlgw/Gateway'#'https://xmlgw.companieshouse.gov.uk'
     #API_URL = 'http://127.0.0.1:5000'
     #API_URL = 'http://xmlgw.companieshouse.gov.uk'
     API_URL = 'http://xmlgw.companieshouse.gov.uk'
