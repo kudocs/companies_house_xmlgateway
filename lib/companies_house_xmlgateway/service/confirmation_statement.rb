@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class ConfirmationStatement < CompaniesHouseXmlgateway::Service::Form
       API_CLASS_NAME = 'ConfirmationStatement'
-      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/ConfirmationStatement-v1-1.xsd'
+      SCHEMA_XSD = 'http://xmlbeta.companieshouse.gov.uk/v1-0/schema/forms/ConfirmationStatement-v1-2-rc1.xsd'
       
       # Generate the XML document that is embedded in the envelope for Confirmation Statement submission
       def build(submission)

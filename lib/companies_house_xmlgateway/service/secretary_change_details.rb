@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class SecretaryChangeDetails < CompaniesHouseXmlgateway::Service::Form
       API_CLASS_NAME = 'OfficerChangeDetails'
-      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/OfficerChangeDetails-v2-8.xsd'
+      SCHEMA_XSD = 'http://xmlbeta.companieshouse.gov.uk/v1-0/schema/forms/OfficerChangeDetails-v2-9-rc1.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Director Appointment action
       def build(submission)
