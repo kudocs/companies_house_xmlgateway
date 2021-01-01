@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class CompanyData < CompaniesHouseXmlgateway::Service::Base
       API_CLASS_NAME = 'CompanyDataRequest'
-      SCHEMA_XSD = 'http://xmlbeta.companieshouse.gov.uk/v1-0/schema/CompanyData-v3-4-rc1.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/CompanyData-v3-4.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Change Ref Date action
       def build(submission)

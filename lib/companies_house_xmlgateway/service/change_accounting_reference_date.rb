@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class ChangeAccountingReferenceDate < CompaniesHouseXmlgateway::Service::Form
       API_CLASS_NAME = 'ChangeAccountingReferenceDate'
-      SCHEMA_XSD = 'http://xmlbeta.companieshouse.gov.uk/v1-0/schema/forms/ChangeAccountingReferenceDate-v2-7-rc1.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/ChangeAccountingReferenceDate-v2-7.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Change Ref Date action
       def build(submission)

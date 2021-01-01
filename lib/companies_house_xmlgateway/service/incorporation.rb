@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class Incorporation < CompaniesHouseXmlgateway::Service::FormIncorp
       API_CLASS_NAME = 'CompanyIncorporation'
-      SCHEMA_XSD = 'http://xmlbeta.companieshouse.gov.uk/v1-0/schema/forms/CompanyIncorporation-v3-3-rc1.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/CompanyIncorporation-v3-3.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Change Address action
       def build(submission)

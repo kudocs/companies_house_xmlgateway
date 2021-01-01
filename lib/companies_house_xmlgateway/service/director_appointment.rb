@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class DirectorAppointment < CompaniesHouseXmlgateway::Service::Form
       API_CLASS_NAME = 'OfficerAppointment'
-      SCHEMA_XSD = 'http://xmlbeta.companieshouse.gov.uk/v1-0/schema/forms/OfficerAppointment-v2-8-rc1.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/OfficerAppointment-v2-8.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Director Appointment action
       def build(submission)
