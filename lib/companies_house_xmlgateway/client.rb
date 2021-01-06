@@ -48,7 +48,8 @@ module CompaniesHouseXmlgateway
       get_document: CompaniesHouseXmlgateway::Service::GetDocument,
       mortages: CompaniesHouseXmlgateway::Service::Mortgages,
       accounts: CompaniesHouseXmlgateway::Service::Accounts,
-      change_of_location: CompaniesHouseXmlgateway::Service::ChangeOfLocation
+      change_of_location: CompaniesHouseXmlgateway::Service::ChangeOfLocation,
+      psc_statement_notification: CompaniesHouseXmlgateway::Service::PscStatementNotification
     }
     
     # Define the Perform method for each of the actions supported by the Client
