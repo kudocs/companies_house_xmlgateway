@@ -1,6 +1,6 @@
 module CompaniesHouseXmlgateway
   module Service
-    class PscStatementNotification < CompaniesHouseXmlgateway::Service::Base
+    class PscStatementNotification < CompaniesHouseXmlgateway::Service::Form
       API_CLASS_NAME = 'PSCStatementNotification'
       SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/PSCStatementNotification-v1-1.xsd'
       
