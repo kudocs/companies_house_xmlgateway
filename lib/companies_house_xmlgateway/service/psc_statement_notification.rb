@@ -12,7 +12,8 @@ module CompaniesHouseXmlgateway
             'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
-           xml.CompanyStatement submission.data[:statement]
+           xml.CompanyStatement submission.data[:statement] if submission.data[:statement_type] == 'company' 
+           xml.PSCStatement submission.data[:statement] if submission.data[:statement_type] == 'psc' 
            xml.RegisterEntryDate Time.now.strftime("%Y-%m-%d")
           end
         end
