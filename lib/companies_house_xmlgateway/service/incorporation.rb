@@ -384,6 +384,7 @@ module CompaniesHouseXmlgateway
               end
               end
             end#PSC end
+            if submission.data[:is_by_shares]
             #shareholdings start
             xml.StatementOfCapital do
               #TODO  in future when we handle multiple currency we need to extend the support
@@ -404,7 +405,7 @@ module CompaniesHouseXmlgateway
                 end
               end
             end
-            end #shareholdings end  
+            end #shareholdings end 
             #start of subscribers
             submission.data[:subscribers].each do |s|
               xml.Subscribers do
@@ -452,6 +453,7 @@ module CompaniesHouseXmlgateway
                 end
               end #of subscribers
             end
+          end
             if submission.data[:guarantors]
               submission.data[:guarantors].each do |g|
             
