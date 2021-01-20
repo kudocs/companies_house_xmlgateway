@@ -37,7 +37,7 @@ module CompaniesHouseXmlgateway
                 end
               end
             end
-            xml.RegisterEntryDate Time.now.strftime("%Y-%m-%d")
+            xml.RegisterEntryDate submission.data[:register_entry_date]#Time.now.strftime("%Y-%m-%d")
           end
         end
       end
