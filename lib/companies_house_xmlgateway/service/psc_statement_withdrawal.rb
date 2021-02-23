@@ -37,8 +37,8 @@ module CompaniesHouseXmlgateway
                 end
               end
             end
-            xml.RegisterEntryDate submission.data[:register_entry_date]#Time.now.strftime("%Y-%m-%d")
             xml.WithdrawalDate submission.data[:withdrawal_entry_date]
+            xml.RegisterEntryDate submission.data[:register_entry_date]#Time.now.strftime("%Y-%m-%d")
           end
         end
       end
