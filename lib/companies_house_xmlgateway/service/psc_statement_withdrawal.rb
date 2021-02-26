@@ -38,6 +38,7 @@ module CompaniesHouseXmlgateway
               end
             end
             xml.WithdrawalDate submission.data[:withdrawal_entry_date]
+            xml.RestrictionsNoticeWithdrawalReason submission.data[:restriction_reason] if submission.data[:restriction_reason]
             xml.RegisterEntryDate submission.data[:register_entry_date]#Time.now.strftime("%Y-%m-%d")
           end
         end
