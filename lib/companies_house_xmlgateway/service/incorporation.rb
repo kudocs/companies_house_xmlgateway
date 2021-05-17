@@ -2,7 +2,7 @@ module CompaniesHouseXmlgateway
   module Service
     class Incorporation < CompaniesHouseXmlgateway::Service::FormIncorp
       API_CLASS_NAME = 'CompanyIncorporation'
-      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/CompanyIncorporation-v3-3.xsd'
+      SCHEMA_XSD = 'http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/CompanyIncorporation-v3-6.xsd'
       
       # Generate the XML document that is embedded in the envelope for a Change Address action
       def build(submission)
@@ -40,7 +40,7 @@ module CompaniesHouseXmlgateway
               xml.CareofName submission.data[:office][:care_of_name]
               xml.PoBox submission.data[:office][:po_box]
             end
-            
+            xml.DataMemorandum true
             xml.Articles submission.data[:articles] if submission.data[:articles]
             #the company has legal restriction on changes to its articles
             xml.RestrictedArticles submission.data[:restriction_articles] if submission.data[:restriction_articles]
