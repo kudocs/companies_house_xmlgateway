@@ -407,7 +407,7 @@ module CompaniesHouseXmlgateway
             end
             end #shareholdings end 
             #start of subscribers
-            submission.data[:subscribers].each do |s|
+            submission.data[:subscribers].each_with_index do |s,i|
               xml.Subscribers do
                 if s[:is_corp]
                   xml.Corporate do 
@@ -451,7 +451,7 @@ module CompaniesHouseXmlgateway
                     xml.ShareValue ss[:value]
                   end  
                 end
-                xml.MemorandumStatement s[:memorandum_statement] if s.has_key?(:memorandum_statement)
+                xml.MemorandumStatement submission.data[:memorandum_statement] if i.to_i == 0
               end #of subscribers
             end
           end
