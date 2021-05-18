@@ -456,7 +456,7 @@ module CompaniesHouseXmlgateway
             end
           end
             if submission.data[:guarantors]
-              submission.data[:guarantors].each do |g|
+              submission.data[:guarantors].each_with_index do |g,i|
             
                 #start of guarantors
                 xml.Guarantors do
@@ -492,7 +492,8 @@ module CompaniesHouseXmlgateway
                     end
                   end
                   xml.MemberClass g[:member_class] if g[:member_class]
-                  xml.AmountGuaranteed  g[:amount_guart]          
+                  xml.AmountGuaranteed  g[:amount_guart]  
+                  xml.MemorandumStatement submission.data[:memorandum_statement] if i.to_i == 0
                 end #of guarantors
               end            
             end
