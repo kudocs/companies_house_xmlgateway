@@ -451,7 +451,7 @@ module CompaniesHouseXmlgateway
                     xml.ShareValue ss[:value]
                   end  
                 end
-                xml.MemorandumStatement s[:memorandum_statement] if s[:memorandum_statement]
+                xml.MemorandumStatement s[:memorandum_statement] if s.has_key?(:memorandum_statement)
               end #of subscribers
             end
           end
