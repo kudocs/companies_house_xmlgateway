@@ -451,6 +451,7 @@ module CompaniesHouseXmlgateway
                     xml.ShareValue ss[:value]
                   end  
                 end
+                xml.MemorandumStatement s[:memorandum_statement]
               end #of subscribers
             end
           end
