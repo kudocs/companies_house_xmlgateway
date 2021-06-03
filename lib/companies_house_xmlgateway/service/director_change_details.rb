@@ -20,7 +20,7 @@ module CompaniesHouseXmlgateway
                 xml.DOB submission.data[:dob]
                 xml.Change do
                   xml.Name do
-                    xml.Title   submission.data[:title] if submission.data[:title]
+                    xml.Title   submission.data[:title] if submission.data[:title].present?
                     xml.Surname submission.data[:new_surname]
                     xml.Forename submission.data[:new_forename]
                     #xml.OtherForenames
