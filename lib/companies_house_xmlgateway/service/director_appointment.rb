@@ -17,7 +17,7 @@ module CompaniesHouseXmlgateway
               xml.ConsentToAct submission.data[:consent_to_act]
               xml.Director do
                 xml.Person do
-                  #xml.Title submission.data[:title]
+                  xml.Title submission.data[:title] if submission.data[:title]
                   xml.Forename submission.data[:forename]
 #                  if submission.data[:other_forenames]
 #                   xml.OtherForenames submission.data[:other_forenames]

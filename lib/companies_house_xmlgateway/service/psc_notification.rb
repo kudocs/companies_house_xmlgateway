@@ -13,6 +13,7 @@ module CompaniesHouseXmlgateway
             'xsi:schemaLocation' => "http://xmlgw.companieshouse.gov.uk #{SCHEMA_XSD}"
           ) do
             xml.Individual do 
+              xml.Title submission.data[:title] if submission.data[:title]
               xml.Forename submission.data[:forename]
               #                  if submission.data[:other_forenames]
               #                   xml.OtherForenames submission.data[:other_forenames]

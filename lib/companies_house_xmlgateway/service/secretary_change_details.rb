@@ -19,7 +19,7 @@ module CompaniesHouseXmlgateway
                 xml.Forename submission.data[:forename]              
                 xml.Change do
                   xml.Name do
-                    #xml.Title
+                    xml.Title submission.data[:title] if submission.data[:title]
                     xml.Surname submission.data[:new_surname]
                     xml.Forename submission.data[:new_forename]
                     #xml.OtherForenames
