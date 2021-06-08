@@ -95,7 +95,8 @@ module CompaniesHouseXmlgateway
                
                     end
                   else
-                    xml.Person do                
+                    xml.Person do  
+                      xml.Title a[:title] if a[:title]
                       xml.Forename a[:forename]#               
                       xml.Surname a[:surname]
                       xml.ServiceAddress do
@@ -203,7 +204,8 @@ module CompaniesHouseXmlgateway
                
                     end
                   else
-                    xml.Person do                
+                    xml.Person do    
+                      xml.Title a[:title] if a[:title]
                       xml.Forename a[:forename]#               
                       xml.Surname a[:surname]
                       xml.ServiceAddress do
@@ -315,6 +317,7 @@ module CompaniesHouseXmlgateway
                       end
                     else
                       xml.Individual do 
+                        xml.Title p[:title] if p[:title]
                         xml.Forename p[:forename]
                      
                         xml.Surname p[:surname]
