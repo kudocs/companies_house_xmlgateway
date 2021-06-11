@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<GovTalkMessage
+	xmlns="http://www.govtalk.gov.uk/CM/envelope"
+	xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:gt="http://www.govtalk.gov.uk/schemas/govtalk/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.govtalk.gov.uk/CM/envelope http://xmlgw.companieshouse.gov.uk/v2-1/schema/Egov_ch-v2-0.xsd">
+	<EnvelopeVersion>1.0</EnvelopeVersion>
+	<Header>
+		<MessageDetails>
+			<Class>ConfirmationStatement</Class>
+			<Qualifier>request</Qualifier>
+			<GatewayTest>1</GatewayTest>
+		</MessageDetails>
+		<SenderDetails>
+			<IDAuthentication>
+				<SenderID>7b33d906fe68ca80bf27f5ddc25a0a32</SenderID>
+				<Authentication>
+					<Method>clear</Method>
+					<Value>1eb869f19ed00d39761dccc456e4be13</Value>
+				</Authentication>
+			</IDAuthentication>
+		</SenderDetails>
+	</Header>
+	<GovTalkDetails>
+		<Keys/>
+	</GovTalkDetails>
+	<Body>
+		<FormSubmission
+			xmlns="http://xmlgw.companieshouse.gov.uk/Header"
+			xmlns:foo="http://xmlgw.companieshouse.gov.uk" xsi:schemaLocation="http://xmlgw.companieshouse.gov.uk/Header http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/FormSubmission-v2-5.xsd">
+			<FormHeader>
+				<CompanyNumber>01744553</CompanyNumber>
+				<CompanyType>EW</CompanyType>
+				<CompanyName>CHELSEA PROPERTY COMPANY LIMITED(THE)</CompanyName>
+				<CompanyAuthenticationCode>E31281</CompanyAuthenticationCode>
+				<PackageReference>3021</PackageReference>
+				<FormIdentifier>ConfirmationStatement</FormIdentifier>
+				<SubmissionNumber>2edc78</SubmissionNumber>
+				<ContactName>Matt Clover</ContactName>
+				<ContactNumber>07412688953</ContactNumber>
+			</FormHeader>
+			<DateSigned>2018-05-08</DateSigned>
+			<Form>
+				<ConfirmationStatement
+					xmlns="http://xmlgw.companieshouse.gov.uk" xsi:schemaLocation="http://xmlgw.companieshouse.gov.uk http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/ConfirmationStatement-v1-1.xsd">
+					<ReviewDate>2018-05-08</ReviewDate>
+					<StatementOfCapital>
+						<Capital>
+							<TotalAmountUnpaid>0.0</TotalAmountUnpaid>
+							<TotalNumberOfIssuedShares>100</TotalNumberOfIssuedShares>
+							<ShareCurrency>GBP</ShareCurrency>
+							<TotalAggregateNominalValue>100.0</TotalAggregateNominalValue>
+							<Shares>
+								<ShareClass>Ordinary</ShareClass>
+								<PrescribedParticulars>EACH SHARE IS ENTITLED TO ONE VOTE IN ANY CIRCUMSTANCES</PrescribedParticulars>
+								<NumShares>100</NumShares>
+								<AggregateNominalValue>100.0</AggregateNominalValue>
+							</Shares>
+						</Capital>
+					</StatementOfCapital>
+					<Shareholdings>
+						<ShareClass>Ordinary</ShareClass>
+						<NumberHeld>25</NumberHeld>
+						<Shareholders>
+							<Name>
+								<Surname>Tolhurst</Surname>
+								<Forename>Philip John</Forename>
+							</Name>
+						</Shareholders>
+					</Shareholdings>
+					<Shareholdings>
+						<ShareClass>Ordinary</ShareClass>
+						<NumberHeld>25</NumberHeld>
+						<Shareholders>
+							<Name>
+								<Surname>Tolhurst</Surname>
+								<Forename>Patrick</Forename>
+							</Name>
+						</Shareholders>
+					</Shareholdings>
+					<Shareholdings>
+						<ShareClass>Ordinary</ShareClass>
+						<NumberHeld>25</NumberHeld>
+						<Shareholders>
+							<Name>
+								<AmalgamatedName>TRAFALGAR NOMINEES LIMITED</AmalgamatedName>
+							</Name>
+						</Shareholders>
+					</Shareholdings>
+					<Shareholdings>
+						<ShareClass>Ordinary</ShareClass>
+						<NumberHeld>25</NumberHeld>
+						<Shareholders>
+							<Name>
+								<Surname>Tolhurst</Surname>
+								<Forename>Jeremy Charles Philip</Forename>
+							</Name>
+						</Shareholders>
+					</Shareholdings>
+					<Shareholdings>
+						<ShareClass/>
+						<NumberHeld>0</NumberHeld>
+						<Shareholders>
+							<Name>
+								<Surname>Raj</Surname>
+								<Forename>David</Forename>
+							</Name>
+						</Shareholders>
+					</Shareholdings>
+					<StateConfirmation>true</StateConfirmation>
+				</ConfirmationStatement>
+			</Form>
+		</FormSubmission>
+	</Body>
+</GovTalkMessage> 

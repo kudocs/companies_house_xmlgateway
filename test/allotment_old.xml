@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ReturnofAllotmentShares
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://xmlgw.companieshouse.gov.uk'
+    xsi:schemaLocation='http://xmlgw.companieshouse.gov.uk http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/ReturnofAllotmentShares-v2-5.xsd'>
+    <StartPeriodSharesAllotted></StartPeriodSharesAllotted>
+    <EndPeriodSharesAllotted></EndPeriodSharesAllotted>
+    <StatementOfCapital>
+        <Capital>
+            <TotalNumberOfIssuedShares></TotalNumberOfIssuedShares>
+            <ShareCurrency></ShareCurrency>
+            <TotalAggregateNominalValue></TotalAggregateNominalValue>
+            <Shares>
+                <ShareClass></ShareClass>
+                <PrescribedParticulars></PrescribedParticulars>
+                <NumShares></NumShares>
+                <AmountPaidDuePerShare></AmountPaidDuePerShare>
+                <AmountUnpaidPerShare></AmountUnpaidPerShare>
+                <AggregateNominalValue></AggregateNominalValue>
+            </Shares>
+            <Shares>
+                <ShareClass></ShareClass>
+                <PrescribedParticulars></PrescribedParticulars>
+                <NumShares></NumShares>
+                <AmountPaidDuePerShare></AmountPaidDuePerShare>
+                <AmountUnpaidPerShare></AmountUnpaidPerShare>
+                <AggregateNominalValue></AggregateNominalValue>
+            </Shares>
+            <Shares>
+                <ShareClass></ShareClass>
+                <PrescribedParticulars></PrescribedParticulars>
+                <NumShares></NumShares>
+                <AmountPaidDuePerShare></AmountPaidDuePerShare>
+                <AmountUnpaidPerShare></AmountUnpaidPerShare>
+                <AggregateNominalValue></AggregateNominalValue>
+            </Shares>
+        </Capital>
+        <Capital>
+            <TotalNumberOfIssuedShares></TotalNumberOfIssuedShares>
+            <ShareCurrency></ShareCurrency>
+            <TotalAggregateNominalValue></TotalAggregateNominalValue>
+            <Shares>
+                <ShareClass></ShareClass>
+                <PrescribedParticulars></PrescribedParticulars>
+                <NumShares></NumShares>
+                <AmountPaidDuePerShare></AmountPaidDuePerShare>
+                <AmountUnpaidPerShare></AmountUnpaidPerShare>
+                <AggregateNominalValue></AggregateNominalValue>
+            </Shares>
+        </Capital>
+        <Capital>
+            <TotalNumberOfIssuedShares></TotalNumberOfIssuedShares>
+            <ShareCurrency></ShareCurrency>
+            <TotalAggregateNominalValue></TotalAggregateNominalValue>
+            <Shares>
+                <ShareClass></ShareClass>
+                <PrescribedParticulars></PrescribedParticulars>
+                <NumShares></NumShares>
+                <AmountPaidDuePerShare></AmountPaidDuePerShare>
+                <AmountUnpaidPerShare></AmountUnpaidPerShare>
+                <AggregateNominalValue></AggregateNominalValue>
+            </Shares>
+        </Capital>
+    </StatementOfCapital>
+    <Allotment>
+        <ShareClass></ShareClass>
+        <NumShares></NumShares>
+        <AmountPaidDuePerShare></AmountPaidDuePerShare>
+        <AmountUnpaidPerShare></AmountUnpaidPerShare>
+        <ShareCurrency></ShareCurrency>
+        <ShareValue></ShareValue>
+        <Consideration></Consideration>
+    </Allotment>
+    <Allotment>
+        <ShareClass></ShareClass>
+        <NumShares></NumShares>
+        <AmountPaidDuePerShare></AmountPaidDuePerShare>
+        <AmountUnpaidPerShare></AmountUnpaidPerShare>
+        <ShareCurrency></ShareCurrency>
+        <ShareValue></ShareValue>
+        <Consideration></Consideration>
+    </Allotment>
+    <Allotment>
+        <ShareClass></ShareClass>
+        <NumShares></NumShares>
+        <AmountPaidDuePerShare></AmountPaidDuePerShare>
+        <AmountUnpaidPerShare></AmountUnpaidPerShare>
+        <ShareCurrency></ShareCurrency>
+        <ShareValue></ShareValue>
+        <Consideration></Consideration>
+    </Allotment>
+
+</ReturnofAllotmentShares>

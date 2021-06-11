@@ -1,0 +1,85 @@
+<?xml version='1.0'?>
+<GovTalkMessage xmlns='http://www.govtalk.gov.uk/CM/envelope' xmlns:dsig='http://www.w3.org/2000/09/xmldsig#' xmlns:gt='http://www.govtalk.gov.uk/schemas/govtalk/core' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.govtalk.gov.uk/CM/envelope http://xmlgw.companieshouse.gov.uk/v2-1/schema/Egov_ch-v2-0.xsd'>
+  <EnvelopeVersion>1.0</EnvelopeVersion>
+  <Header>
+    <MessageDetails>
+      <Class>PSCChangeDetails</Class>
+      <Qualifier>request</Qualifier>
+      <GatewayTest>1</GatewayTest>
+    </MessageDetails>
+    <SenderDetails>
+      <IDAuthentication>
+        <SenderID>7b33d906fe68ca80bf27f5ddc25a0a32</SenderID>
+        <Authentication>
+          <Method>clear</Method>
+          <Value>1eb869f19ed00d39761dccc456e4be13</Value>
+        </Authentication>
+      </IDAuthentication>
+    </SenderDetails>
+  </Header>
+  <GovTalkDetails>
+    <Keys/>
+  </GovTalkDetails>
+  <Body>
+    <FormSubmission xmlns='http://xmlgw.companieshouse.gov.uk/Header' xmlns:foo='http://xmlgw.companieshouse.gov.uk' xsi:schemaLocation='http://xmlgw.companieshouse.gov.uk/Header http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/FormSubmission-v2-5.xsd'>
+      <FormHeader>
+        <CompanyNumber>10234624</CompanyNumber>
+        <CompanyType>EW</CompanyType>
+        <CompanyName>KUDOCS TESTING LIMITED</CompanyName>
+        <CompanyAuthenticationCode>ABC123</CompanyAuthenticationCode>
+        <PackageReference>0012</PackageReference>
+        <FormIdentifier>PSCChangeDetails</FormIdentifier>
+        <SubmissionNumber>fa2ace</SubmissionNumber>
+        <ContactName>Ben Dunham</ContactName>
+        <ContactNumber>01234567890</ContactNumber>
+      </FormHeader>
+      <DateSigned>2018-01-17</DateSigned>
+      <Form>
+        <PSCChangeDetails xmlns='http://xmlgw.companieshouse.gov.uk' xsi:schemaLocation='http://xmlgw.companieshouse.gov.uk http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/...'>
+          <Individual>
+            <Surname>yyy</Surname>
+            <Forename>xxx</Forename>
+            <PartialDOB>
+              <Month>3</Month>
+              <Year>1984</Year>
+            </PartialDOB>
+            <Change>
+              <Name>
+                <Surname>ooo</Surname>
+                <Forename>uuu</Forename>
+              </Name>
+              <ServiceAddress>
+                <Address>
+                  <Premise>24</Premise>
+                  <Street>Second street</Street>
+                  <PostTown>Basildon</PostTown>
+                  <County>Essex</County>
+                  <Country>GBR</Country>
+                  <Postcode>SS16</Postcode>
+                  <PoBox>234</PoBox>
+                </Address>
+              </ServiceAddress>
+              <ResidentialAddress>
+                <Address>
+                  <Premise>294</Premise>
+                  <Street>Third street</Street>
+                  <PostTown>Basildon</PostTown>
+                  <County>Essex</County>
+                  <Country>GBR</Country>
+                  <Postcode>SS16</Postcode>
+                </Address>
+              </ResidentialAddress>
+              <Nationality>British</Nationality>
+              <CountryOfResidence>GBR</CountryOfResidence>
+              <NatureOfControls>
+                <NatureOfControl>OWNERSHIPOFSHARES_25TO50PERCENT</NatureOfControl>
+              </NatureOfControls>
+            </Change>
+          </Individual>
+          <DateOfChange>2018-01-15</DateOfChange>
+          <RegisterEntryDate>2018-01-05</RegisterEntryDate>
+        </PSCChangeDetails>
+      </Form>
+    </FormSubmission>
+  </Body>
+</GovTalkMessage>

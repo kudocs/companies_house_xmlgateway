@@ -17,6 +17,7 @@ module CompaniesHouseXmlgateway
               xml.Street submission.data[:street]
               xml.Thoroughfare submission.data[:thoroughfare]
               xml.PostTown submission.data[:post_town]
+              xml.County  submission.data[:region]
               xml.Country submission.data[:country]
               xml.Postcode submission.data[:postcode]
               xml.CareofName submission.data[:care_of_name]

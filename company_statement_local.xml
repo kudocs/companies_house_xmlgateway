@@ -1,0 +1,53 @@
+<?xml version=\"1.0\"?>
+<GovTalkMessage
+	xmlns=\"http://www.govtalk.gov.uk/CM/envelope\"
+	xmlns:dsig=\"http://www.w3.org/2000/09/xmldsig#\"
+	xmlns:gt=\"http://www.govtalk.gov.uk/schemas/govtalk/core\"
+	xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.govtalk.gov.uk/CM/envelope http://xmlgw.companieshouse.gov.uk/v2-1/schema/Egov_ch-v2-0.xsd\">  
+	<EnvelopeVersion>1.0</EnvelopeVersion>  
+	<Header>    
+		<MessageDetails>      
+			<Class>PSCStatementWithdrawal</Class>      
+			<Qualifier>request</Qualifier>      
+			<GatewayTest>1</GatewayTest>    
+		</MessageDetails>    
+		<SenderDetails>      
+			<IDAuthentication>        
+				<SenderID>7b33d906fe68ca80bf27f5ddc25a0a32</SenderID>        
+				<Authentication>          
+					<Method>clear</Method>          
+					<Value>1eb869f19ed00d39761dccc456e4be13</Value>        
+				</Authentication>      
+			</IDAuthentication>    
+		</SenderDetails>  
+	</Header>  
+	<GovTalkDetails>    
+		<Keys/>  
+	</GovTalkDetails>  
+	<Body>    
+		<FormSubmission
+			xmlns=\"http://xmlgw.companieshouse.gov.uk/Header\"
+			xmlns:foo=\"http://xmlgw.companieshouse.gov.uk\" xsi:schemaLocation=\"http://xmlgw.companieshouse.gov.uk/Header http://xmlgw.companieshouse.gov.uk/v2-1/schema/forms/FormSubmission-v2-8.xsd\">      
+			<FormHeader>        
+				<CompanyNumber>77320634</CompanyNumber>        
+				<CompanyType>EW</CompanyType>        
+				<CompanyName>CASTLE PROPERTIES </CompanyName>        
+				<CompanyAuthenticationCode>E84861</CompanyAuthenticationCode>        
+				<PackageReference>0012</PackageReference>        
+				<FormIdentifier>PSCStatementWithdrawal</FormIdentifier>        
+				<SubmissionNumber>704c6c</SubmissionNumber>        
+				<ContactName>Matt Clover</ContactName>        
+				<ContactNumber>07412688953</ContactNumber>      
+			</FormHeader>      
+			<DateSigned>2018-05-05</DateSigned>      
+			<Form>        
+				<PSCStatementWithdrawal
+					xmlns=\"http://xmlgw.companieshouse.gov.uk\" xsi:schemaLocation=\"http://xmlgw.companieshouse.gov.uk http://xmlgw.companieshouse.gov.uk/v1-0/schema/forms/PSCStatementWithdrawal-v1-0.xsd\"> 
+
+					<CompanyStatement>NO_INDIVIDUAL_OR_ENTITY_WITH_SIGNFICANT_CONTROL</CompanyStatement>  
+					<WithdrawalDate>2018-05-05</WithdrawalDate>                      
+				</PSCStatementWithdrawal>      
+			</Form>    
+		</FormSubmission>  
+	</Body>
+</GovTalkMessage>
