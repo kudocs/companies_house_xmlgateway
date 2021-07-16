@@ -36,7 +36,9 @@ module CompaniesHouseXmlgateway
                   else
                     xml.Country submission.data[:address][:country]
                   end
-                  #xml.Postcode submission.data[:service_address][:postcode]
+                  if submission.data[:address][:postcode]
+                    xml.Postcode submission.data[:address][:postcode]
+                  end 
                   if submission.data[:address][:care_of_name]
                     xml.CareofName submission.data[:address][:care_of_name]
                   end
